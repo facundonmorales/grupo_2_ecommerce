@@ -4,3 +4,7 @@ Mayra Roa cuenta con un MSA y BS en Emprendimiento de Negocios de Babson College
 Su experiencia con PANAL Ed-tech se extiende desde la creación de programas educativos y aplicaciones digitales para emprendedores, hasta conferencias, talleres y eventos de financiamiento. Ha sido speaker de TEDx, fue cofundadora de QVIT Corp. (vestier virtual nominado como una de las empresas tecnológicas más revolucionarias en el Web Summit 2014 de Irlanda) y actualmente es columnista de la Revista Dinero.
 
 Sus emprendimientos han sido destacados por medios de comunicación tan importantes como CNN, Huffington Post, Univisión, y las revistas Vogue y Marie Claire.
+
+Facundo Nahuel Morales:
+    Es estudiante de la carreria de Licenciatura en Sistemas de la Información en la Universidad Nacional del Comahue, tiene 23 años y es de Neuquén, Argentina.
+    Se encuentra en constante aprendizaje y es una persona que le encanta todo el mundo IT y del hardware y software en general.

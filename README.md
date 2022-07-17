@@ -10,3 +10,8 @@ EQUIPO
 Facundo Nahuel Morales:
     Es estudiante de la carreria de Licenciatura en Sistemas de la Información en la Universidad Nacional del Comahue, tiene 23 años y es de Neuquén, Argentina.
     Se encuentra en constante aprendizaje y es una persona que le encanta todo el mundo IT y del hardware y software en general.
+
+Matias Ignacio Ferreyra:
+
+    Es empleado administrativo, trabajo en Club Atletico Racing, Club Atletico Belgrano, Instituto Atletico Central Cordoba, desde hace 18 años trabaja en el centro de distribucion de una Cadena de Supermercados, tiene de 38 años y es de Córdoba, Argentina.
+    Actualmente estudia programacion Full Stack.

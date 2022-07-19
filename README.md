@@ -8,7 +8,7 @@ EQUIPO
     Sus emprendimientos han sido destacados por medios de comunicación tan importantes como CNN, Huffington Post, Univisión, y las revistas Vogue y Marie Claire.
 
 Facundo Nahuel Morales:
-    Es estudiante de la carreria de Licenciatura en Sistemas de la Información en la Universidad Nacional del Comahue, tiene 23 años y es de Neuquén, Argentina.
+    Es estudiante de la carrera de Licenciatura en Sistemas de la Información en la Universidad Nacional del Comahue, tiene 23 años y es de Neuquén, Argentina.
     Se encuentra en constante aprendizaje y es una persona que le encanta todo el mundo IT y del hardware y software en general.
 
 Matias Ignacio Ferreyra:

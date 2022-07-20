@@ -1,5 +1,9 @@
-
-EQUIPO
+2. Definir la temática del Market Place
+    2.1 Temática
+        Venta de hardware para profesionales
+    2.2 Productos
+    2.3 Público
+    2.4 Equipo
 
     Mayra Roa:
     
@@ -19,10 +23,20 @@ Matias Ignacio Ferreyra:
     Es empleado administrativo, trabajo en Club Atletico Racing, Club Atletico Belgrano, Instituto Atletico Central Cordoba, desde hace 18 años trabaja en el centro de distribucion de una Cadena de Supermercados, tiene de 38 años y es de Córdoba, Argentina.
     Actualmente estudia programacion Full Stack.
 
-Referentes/Inspiraciones para este proyecto:
+3.Buscar inspiración en referentes del mercado
 
 - https://www.panal.co/
-- https://www.udemy.com/
-- https://www.nvidia.com/es-es/
-- https://www.fullh4rd.com.ar/
+log in, registro y tipografia
+
+- https://www.nvidia.com/es-es/ 
+detalle productos
+
+- https://www.mercadolibre.com
+carrito
+
 - https://compragamer.com/?seccion=3
+presentan los productos
+
+- https://www.apple.com
+home
+colores

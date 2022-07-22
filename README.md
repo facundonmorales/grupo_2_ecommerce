@@ -23,6 +23,10 @@ Matias Ignacio Ferreyra:
     Es empleado administrativo, trabajo en Club Atletico Racing, Club Atletico Belgrano, Instituto Atletico Central Cordoba, desde hace 18 años trabaja en el centro de distribucion de una Cadena de Supermercados, tiene de 38 años y es de Córdoba, Argentina.
     Actualmente estudia programacion Full Stack.
 
+Manuel Alejandro Ugalde:
+    Es comerciante verificado de latam en Binance, se dedica al mundo del trading,las criptomonedas y las inversiones bursatiles. En el 2021  creo su propia  casa de cambio virtual llamada COCO CASH. actualmente estudia programacion con objetivo de unificar los conocimientos y ejercelos conjunto al mundo criptografico y bursatil. tienes 25 años nacio en Venezuela pero actualmente reside en Argentina. 
+
+    
 3.Buscar inspiración en referentes del mercado
 
 - https://www.panal.co/

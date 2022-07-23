@@ -2,9 +2,10 @@
     2.1 Temática
         Venta de hardware para profesionales
     2.2 Productos
-    2.3 Público
-    2.4 Equipo
 
+    2.3 Público
+        Profesionales de todo tipo de carreras (incluyendo y no limitado a banqueros, arquitectos, médicos, etc.). La edad de estos profesionales está entre los 28 a los 45 años. 
+    2.4 Equipo
     Mayra Roa:
     
     Cuenta con un MSA y BS en Emprendimiento de Negocios de Babson College (Summa Cum Laude en ambos títulos). Escritora del libro Arnés: Guía Práctica Para Emprender (libro que en abril del 2020 obtuvo el reconocimiento en Amazon como #1 en la categoría de nuevos lanzamientos en educación continua para adultos a nivel mundial). Como emprendedora en serie de startups en tecnología, fundó junto a su hermana Lorena Roa, PANAL Ed-Tech, casa de software especializada en soluciones didácticas para empoderar a emprendedores y disminuir la tasa de discontinuidad empresarial en América Latina.
@@ -30,17 +31,16 @@ Manuel Alejandro Ugalde:
 3.Buscar inspiración en referentes del mercado
 
 - https://www.panal.co/
-log in, registro y tipografia
+De este referente se busca tener guía para el desarrollo del log in y registro. Además es muy atractiva la tipografia ya que hace ver la página muy limpia.
 
 - https://www.nvidia.com/es-es/ 
-detalle productos
+En la forma que se presentan los detalles de los productos es muy limpia y muy clara. Servirá de inspiración para el wireframe.
 
 - https://www.mercadolibre.com
-carrito
+Esta al ser una de las páginas más reconocidas en el mundo de ecommerce, será una inspiración importante para el desarrollo del carrito de compras, es muy intuitivo.
 
 - https://compragamer.com/?seccion=3
-presentan los productos
+En esta págino es interesante cómo se presentan los productos de manera horizontal.
 
 - https://www.apple.com
-home
-colores
+Apple será la inspiración central de la página ya que sus colores y distribución del Home es muy atractiva para profesionales y estás directamente relacionada con hardware.

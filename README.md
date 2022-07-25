@@ -44,3 +44,8 @@ En esta págino es interesante cómo se presentan los productos de manera horizo
 
 - https://www.apple.com
 Apple será la inspiración central de la página ya que sus colores y distribución del Home es muy atractiva para profesionales y estás directamente relacionada con hardware.
+
+Wireframe
+Registro : https://wireframe.cc/c2l9Fs
+Inicio sesion : https://wireframe.cc/tE7GyN
+Nueva Contraseña: https://wireframe.cc/PzpmDz

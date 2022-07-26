@@ -1,49 +1,73 @@
 2. Definir la temática del Market Place
+
     2.1 Temática
         Venta de hardware para profesionales
+
     2.2 Productos
+
         2.2.1 AirPods: 
         Auriculares inalámbricos, resistentes al agua con una duración de 6 horas de carga podrás contestar llamadas mientras escuchas música sin tener que cambiar de dispositivo, te permiten presionarlos para pausar o reproducir.
+
         2.2.2 Asistente de Voz: 
         Máquina de inteligencia artificial y reconocimiento de voz capaz de realizar procesos t6ales como reproducción y pausa de video, encendido y apagado de luces en casa entre otros tan solo orden de voz.
+
         2.2.3 Celulares:
         Dispositivo móvil el cual permite la realización de diversas tareas como administración de documentos, reproducción de audio y video entre otros.
+
         2.2.4 Reloj Inteligente:
         Dispositivo el cual permite conectarse a varios dispositivos móviles para realizar funciones como recepción de notificaciones además de contar con sensores para la medición de ritmo cardiaco, presión en la sangre, oxigeno en la sangre entre otras.
+
         2.2.5 Computadores:
         Maquina electrónica la cual permite realizar una variedad de tareas, como almacenamiento de archivos multimedia envió y recepción de los mismos entre otros.
+
         2.2.6 Impresora:
         Herramienta inalámbrica la cual se encarga de la impresión de documentos de distintos formatos.
+
         2.2.7 Tarjetas Inteligentes:
-        Tarjeta integrada con un micro chip el cual permite realizar transacciones de manera más ágil.  
+        Tarjeta integrada con un micro chip el cual permite realizar transacciones de manera más ágil.
+
         2.2.8 Mouse:
         Dispositivo ergonómico el cual se adapta de mejor manera al usuario permitiendo un mejor desarrollo de las actividades a realizar. 
-        2.2.9 Videobeam:
+
+        2.2.9 Proyector:
         Dispositivo que permite la ilustración a gran escala de archivos multimedia tales como videos, fotografías entre otros.
+
         2.2.10 Gafas realidad virtual:
         Herramienta la cual permite la visualización en mejor escala de objetos que se encuentran en entornos virtuales.
-        2.2.11 Televisores:
+
+        2.2.11 Monitor:
         Dispositivo electrónico cuya función principal es la reproducción de archivos multimedia. 
+
         2.2.12 Cámaras:
         Dispositivo de seguridad encargado de captar las imágenes de la zona donde se ubique.
+
         2.2.13 Drone:
         Dispositivo remoto el cual puede cumplir varias tareas como la captura de video e imágenes en zonas de difícil acceso. 
+
         2.2.14 Ipad:
         Dispositivo móvil con la capacidad de realizar varias tareas como diseño web ilustraciones entre otras.  
+
         2.2.15 Tarjeta Grafica:
-        Componente encargado de la ilustración visual de los datos que está procesando el dispositivo.
+        Es una tarjeta de expansión de la tarjeta madre o motherboard del computador que se encarga de procesar los datos provenientes del procesador y transformarlos en información comprensible y representable en el dispositivo de salida.
+
         2.2.16 Procesador:
-        Componente encargado de procesar toda información existente en un dispositivo 
-        2.2.17 Cerraduras Inteligentes:
-        Dispositivo de seguridad diseñado para restringir el acceso a distintos lugares 
-        2.2.18 Aspiradora Inteligente:
-        Dispositivo de limpieza inalámbrico el cual facilita el aseo del entorno.
-        2.2.19 Cargador Portátil:
-        Unidad de carga móvil que permite carga nuestro dispositivo sin necesidad de puerto estático. 
-        2.2.20 Bolígrafo Inteligente:
-        Herramienta que se utiliza en dispositivos móviles enfocado especiales en el área de diseño digital.           
+         Es el cerebro de todo el funcionamiento del sistema, el encargado de dirigir todas las tareas que lleva a cabo el equipo y de ejecutar el código de los diferentes programas.
+
+        2.2.17 Tarjeta Madre:
+         Se trata de la placa de circuito impreso principal de una computadora, lo que significa que es la pieza principal de los circuitos a la que se conectan las demás piezas que crean el conjunto.
+
+        2.2.18 Memoria Ram:
+        Almacena la información que usa de forma activa su computadora para que que pueda acceder a ella de manera rápida. Cuanto más programas ejecute su sistema, más memoria necesitará.
+
+        2.2.19 Disco Duro | Sólido:
+        Unidad de almacenamiento de datos de una computadora.
+
+        2.2.20 Gabinetes:
+        Chasis de un PC, dentro de esté se colocan todos los componentes que utiliza una computadora.
+
     2.3 Público
-        Profesionales de todo tipo de carreras (incluyendo y no limitado a banqueros, arquitectos, médicos, etc.). La edad de estos profesionales está entre los 28 a los 45 años. 
+        Profesionales de todo tipo de carreras (incluyendo y no limitado a banqueros, arquitectos, médicos, etc.). La edad de estos profesionales está entre los 28 a los 45 años.
+
     2.4 Equipo
     Mayra Roa:
     
@@ -64,6 +88,7 @@ Matias Ignacio Ferreyra:
     Actualmente estudia programacion Full Stack.
 
 Manuel Alejandro Ugalde:
+
     Es comerciante verificado de latam en Binance, se dedica al mundo del trading,las criptomonedas y las inversiones bursatiles. En el 2021  creo su propia  casa de cambio virtual llamada COCO CASH. actualmente estudia programacion con objetivo de unificar los conocimientos y ejercelos conjunto al mundo criptografico y bursatil. tienes 25 años nacio en Venezuela pero actualmente reside en Argentina. 
 
     
@@ -83,9 +108,3 @@ En esta págino es interesante cómo se presentan los productos de manera horizo
 
 - https://www.apple.com
 Apple será la inspiración central de la página ya que sus colores y distribución del Home es muy atractiva para profesionales y estás directamente relacionada con hardware.
-
-Wireframe
-
-- Registro : https://wireframe.cc/c2l9Fs
-- Inicio sesion : https://wireframe.cc/tE7GyN
-- Nueva Contraseña: https://wireframe.cc/PzpmDz

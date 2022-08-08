@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+}
+
+body{
+    background-color: #fafbfc;
+}
+
+div.container nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+}
+.logo img{
+    height: 33px;
+    margin-top: 8px;
+}
+
+.boton_carrito{
+    color: gray;
+    font-size: 22px;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+.bars_menu{
+    width: 23px;
+    height: 23px;
+    margin-top: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.bars_menu span{
+    display:block;
+    width: 100%;
+    height: 2px;
+    background: gray;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+}
+
+.bars_menu:active .line1_bars-menu{
+    transform: rotate(45deg);
+}
+
+.bars_menu:active .line2_bars-menu{
+    opacity: 0;
+    margin-left: -30px
+}
+
+.bars_menu:active .line3_bars-menu{
+    transform: rotate(-45deg);
+}
+
+div.contactanos{
+    background-color: black;
+    display: flex;
+}
+div.slogans{
+    margin: 5%;
+}
+div.slogans h1{
+    display: inline-block;
+    font-size: 16px;
+    color: black;
+}
+
+

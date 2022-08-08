@@ -21,3 +21,7 @@ app.get('/register', (req,res)=>{
 app.get('/pass', (req,res)=>{
     res.sendFile(__dirname + '/views/pass.html');
 });
+
+app.get('/productosdetalle', (req,res)=>{
+    res.sendFile(__dirname + '/views/productosdetalle.html');
+});

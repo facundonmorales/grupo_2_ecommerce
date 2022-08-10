@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>Detalle del Producto</title>
 </head>
 
@@ -31,23 +32,22 @@
         <br>
         <br>
         <div class="detalle">
-            <div>
-                <img src="/imagenes/airpods.jpg" alt="imagen de airpods">
+            <div class="centrar">
+                <img  src="/imagenes/airpods.jpg" alt="imagen de airpods">
             </div>
-            <div>
+            <div class="centrar">
                 <h3> AirPods </h3>
                 <br>
                 <span class="precio">$217.50</span>
-                <span>0% OFF</span>
+                <span class="info-envio">0% OFF</span>
                 <br>
-                <p>1 Cuota</p>
+                <p class="info-envio">1 Cuota</p>
                 <br>
                 <h6>Información de envío:</h6>
-                <br>
-                <h6>Si lo pides en 24 horas lo estarás recibiendo en máximo tres días</h6>
+                <p class="info-envio">Si lo pides en 24 horas lo estarás recibiendo en máximo tres días</p>
                 <br>
                 <form action="resultado.html" method="POST">
-                    <select name="cantidad">
+                    <select name="cantidad" class="cajon-cantidad">
                         <option name="cantidad" value=1>Cantidad:1</option>
                         <option name="cantidad" value=2>Cantidad:2</option>
                         <option name="cantidad" value=3>Cantidad:3</option>
@@ -68,13 +68,15 @@
             </div>
         </div>
     </section>
+    <br>
     <section>
-        <h3>Características del Producto</h3>
-        <br>
-        <p>Auriculares inalámbricos, resistentes al agua con una duración de 6 horas de carga podrás contestar llamadas
+            <h3 class="caracteristicas">Características del Producto</h3>
+            <br>
+        <div>
+            <p class="descripcion">Auriculares inalámbricos, resistentes al agua con una duración de 6 horas de carga podrás contestar llamadas
             mientras escuchas música sin tener que cambiar de dispositivo, te permiten presionarlos para pausar o
-            reproducir.</p>
-
+                reproducir.</p>
+        </div>
     </section>
     <footer>
 

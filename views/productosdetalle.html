@@ -5,15 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/stylesOtro.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Detalle del Producto</title>
 </head>
 
 <body>
     <header>
-
+        <div class="container">
+            <nav>
+                <div class="bars_menu">
+                    <span class="line1_bars-menu"></span>
+                    <span class="line2_bars-menu"></span>
+                    <span class="line3_bars-menu"></span>
+                </div>
+                <a class="logo" href="/">
+                    <img src="/img/logo.png" alt="logo">
+                </a>
+                <div class="boton_carrito">
+                    <a href=""><i class="fas fa-shopping-bag"></i></a>
+                </div>
+            </nav>
+        </div>
     </header>
     <section>
+        <br>
+        <br>
         <div class="detalle">
             <div>
                 <img src="/imagenes/airpods.jpg" alt="imagen de airpods">
@@ -26,9 +42,9 @@
                 <br>
                 <p>1 Cuota</p>
                 <br>
-                <h6>Información de Envío</h6>
+                <h6>Información de envío:</h6>
                 <br>
-                <h8>Si lo pides en 24 horas lo estarás recibiendo en máximo tres días</h8>
+                <h6>Si lo pides en 24 horas lo estarás recibiendo en máximo tres días</h6>
                 <br>
                 <form action="resultado.html" method="POST">
                     <select name="cantidad">
@@ -44,6 +60,7 @@
                         <option name="cantidad" value=10>Cantidad:10</option>
                     </select>
                     <br>
+                    <br>
                     <button type="submit" class="boton-producto"> Comprar</button>
                     <br>
                     <button type="submit" class="boton-producto"> Agregar al carrito</button>
@@ -52,7 +69,8 @@
         </div>
     </section>
     <section>
-        <label>Características del Producto</label>
+        <h3>Características del Producto</h3>
+        <br>
         <p>Auriculares inalámbricos, resistentes al agua con una duración de 6 horas de carga podrás contestar llamadas
             mientras escuchas música sin tener que cambiar de dispositivo, te permiten presionarlos para pausar o
             reproducir.</p>

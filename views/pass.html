@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesOtro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-
+        <div class="container">
+            <nav>
+                <div class="bars_menu">
+                    <span class="line1_bars-menu"></span>
+                    <span class="line2_bars-menu"></span>
+                    <span class="line3_bars-menu"></span>
+                </div>
+                <a class="logo" href="/">
+                    <img src="/img/logo.png" alt="logo">
+                </a>
+                <div class="boton_carrito">
+                    <a href=""><i class="fas fa-shopping-bag"></i></a>
+                </div>
+            </nav>
+        </div>
     </header>
   <main>
-        <div>
+        <div class="pass">
             <p>Crea una nueva contraseña</p>
             <p>Ingresa tu dirección de correo electrónico</p>
             <form action="/pass" method="post"></form>
             
             <input type="email" placeholder="Email">
             <br>
-            <button type="submit">Crear Contraseña</button>
+            <button type="submit" class="boton">Crear Contraseña</button>
             <br>
         </div>
 

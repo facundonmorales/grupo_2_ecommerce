@@ -152,7 +152,36 @@ h1 {
 
 }
 
-
+.container_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-top: 5%;
+}
+.container_footer a i{
+    margin-right: 10px;
+}
+.container_footer a:hover i{
+    transition: .5s;
+    transform: rotate(360deg);
+    
+}
+.container_footer a{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+.container_footer a:hover{
+    transition: .5s;
+    color: white;}
 
 
 

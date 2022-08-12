@@ -27,6 +27,9 @@ div.container nav {
     margin-right: 8px;
     margin-top: 8px;
 }
+nav .menu{
+    margin-top: 8px;
+}
 .bars_menu{
     width: 23px;
     height: 23px;
@@ -43,31 +46,114 @@ div.container nav {
     transform-origin: 0px 100%;
     transition: all 300ms;
 }
-
-.bars_menu:active .line1_bars-menu{
+/*
+.bars_menu:active .linea1_bars-menu{
     transform: rotate(45deg);
 }
 
-.bars_menu:active .line2_bars-menu{
+.bars_menu:active .linea2_bars-menu{
     opacity: 0;
     margin-left: -30px
 }
 
-.bars_menu:active .line3_bars-menu{
+.bars_menu:active .linea3_bars-menu{
     transform: rotate(-45deg);
 }
+*/
 
-div.contactanos{
-    background-color: black;
+
+.Registro {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 23%;
 }
-div.slogans{
-    margin: 5%;
+.boton {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    font-size: 15px;
 }
-div.slogans h1{
-    display: inline-block;
-    font-size: 16px;
-    color: black;
+h1 {
+    text-align: center;
 }
+
+.detalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centrar {
+    align-self: center
+}
+.precio {
+    font-size: 30px;
+    font-weight: bold;
+}
+.boton-producto {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    height: 25px;
+    font-size: 10px;
+    margin: 1px;
+    border-radius: 10%;
+    transition:
+        backgound-color, 0.5 s;
+}
+
+.boton-producto:hover{
+    background-color: grey;
+}
+.info-envio {
+    width: 100px;
+    font-size: 10px;
+}
+
+.cajon-cantidad {
+    width:200px;
+    border-radius: 10%;
+    font-size: 10px
+}
+
+.caracteristicas {
+    margin-left: 5%;
+}
+
+.descripcion {
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 80%
+}
+
+@media (min-width:361px){
+    .detalle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    };
+    .centrar {
+        align-self: auto;
+    }
+    .caracteristicas {
+        margin-left: 20%;
+    }
+    
+    .descripcion {
+        text-align: justify;
+        margin-left: 20%;
+        margin-right: 20%;
+        font-size: 80%
+    }
+
+}
+
+
+
+
 
 

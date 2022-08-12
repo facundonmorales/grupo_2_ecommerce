@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesOtro.css">
+    
     <title>Login</title>
 </head>
 <body>
     <header>
-
+        <div class="container">
+            <nav>
+                <div class="bars_menu">
+                    <span class="line1_bars-menu"></span>
+                    <span class="line2_bars-menu"></span>
+                    <span class="line3_bars-menu"></span>
+                </div>
+                <a class="logo" href="/">
+                    <img src="/img/logo.png" alt="logo">
+                </a>
+                <div class="boton_carrito">
+                    <a href=""><i class="fas fa-shopping-bag"></i></a>
+                </div>
+            </nav>
+        </div>
     </header>
   <main>
-        <div>
+        <div class="login">
             <p>Iniciar sesión</p>
             <form action="/login" method="post"></form>
             
@@ -21,7 +37,7 @@
             <br>
             <a href="/pass">¿Olvidaste tu contraseña?</a>
             <br>
-            <button type="submit"> Log in</button>
+            <button type="submit" class="boton"> Log in</button>
             <br>
             <a href="/register">Crear cuenta</a>
         </div>

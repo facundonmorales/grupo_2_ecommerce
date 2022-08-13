@@ -27,3 +27,6 @@ app.get('/pass', (req,res)=>{
 app.get('/productosdetalle', (req,res)=>{
     res.sendFile(__dirname + '/views/productosdetalle.html');
 });
+app.get('/Carrito',(req,res)=>{
+    res.sendFile(__dirname +'/views/productCart.html')
+})

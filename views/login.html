@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/stylesOtro.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link class="ico-pestaña"rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     
     <title>Login</title>
 </head>
@@ -12,11 +17,13 @@
     <header>
         <div class="container">
             <nav>
-                <div class="bars_menu">
-                    <span class="line1_bars-menu"></span>
-                    <span class="line2_bars-menu"></span>
-                    <span class="line3_bars-menu"></span>
-                </div>
+                <a class="menu" href="">
+                    <div class="bars_menu">
+                        <span class="linea1_bars-menu"></span>
+                        <span class="linea2_bars-menu"></span>
+                        <span class="linea3_bars-menu"></span>
+                    </div>
+                </a>
                 <a class="logo" href="/">
                     <img src="/img/logo.png" alt="logo">
                 </a>
@@ -28,7 +35,7 @@
     </header>
   <main>
         <div class="login">
-            <p>Iniciar sesión</p>
+            <h1>Iniciar sesión</h1>
             <form action="/login" method="post"></form>
             
             <input type="email" placeholder="Email">
@@ -44,8 +51,12 @@
 
   </main>  
   <footer>
-
-
-  </footer>
+    <div class="container_footer">
+        <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
+        <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
+        <a href="#"><i class="fas fa-truck"></i>Envios</a>
+        <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
+    </div>
+</footer>
 </body>
 </html>

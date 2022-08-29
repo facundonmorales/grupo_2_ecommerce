@@ -1,7 +1,7 @@
 const express = require('express');
 const usuariosControllers = require('../controller/users.controller')
 
-const router = express.Router
+const router = express.Router()
 
 router.get('/login', usuariosControllers.login),
 router.get('/pass', usuariosControllers.pass),

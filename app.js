@@ -1,6 +1,5 @@
 const express = require('express');
 
-const usersRouter = require('./routes/routes.users')
 const app = express();
 
 
@@ -10,9 +9,11 @@ app.set("view engine","ejs");
 
 const rutaCarrito= require("./routes/routes.carrito")
 
-app.use('/carrito', rutaCarrito)
+app.use('/carrito', rutaCarrito);
 
-app.use('/users'.usersRouter)
+const usersRouter = require('./routes/routes.users') 
+
+app.use('/users',usersRouter)
 
 
 app.get('/', (req, res) => {

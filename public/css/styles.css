@@ -9,7 +9,9 @@
 body{
     background-color: #fafbfc;
 }
-
+main{
+    height: 100vh;
+}
 div.container nav {
     display: flex;
     flex-wrap: wrap;

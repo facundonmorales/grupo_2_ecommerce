@@ -8,7 +8,10 @@ const productosController = {
         res.render('productosdetalle')},
 
     crearProducto : (req, res) => {
-        res.send('Crea un producto')}
+        res.render('productCreate')},
+    
+    modificarProducto : (req, res) => {
+        res.render('productEdition')}
 }
 
 module.exports= productosController;

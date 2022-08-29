@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link class="ico-pestaña"rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    
-    <title>Login</title>
-</head>
+    <title>Pass</title>
+</head> -->
+<%- include("./partials/head") %>
 <body>
-    <header>
+    <!-- <header>
         <div class="container">
             <nav>
-                <a class="menu" href="">
-                    <div class="bars_menu">
-                        <span class="linea1_bars-menu"></span>
-                        <span class="linea2_bars-menu"></span>
-                        <span class="linea3_bars-menu"></span>
-                    </div>
-                </a>
+                <div class="bars_menu">
+                    <span class="line1_bars-menu"></span>
+                    <span class="line2_bars-menu"></span>
+                    <span class="line3_bars-menu"></span>
+                </div>
                 <a class="logo" href="/">
                     <img src="/img/logo.png" alt="logo">
                 </a>
@@ -32,31 +30,35 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
+    <%- include("./partials/header")  %> 
   <main>
-        <div class="login">
-            <h1>Iniciar sesión</h1>
-            <form action="/login" method="post"></form>
+        <div class="pass">
+            <h1>Crea una nueva contraseña</h1>
+            <h4>Ingresa tu dirección de correo electrónico</h4>
+            <form action="/pass" method="post">
             
             <input type="email" placeholder="Email">
             <br>
-            <input type="password" placeholder="Contraseña">
+            <button type="submit" class="boton">Crear Contraseña</button>
             <br>
-            <a href="/pass">¿Olvidaste tu contraseña?</a>
             <br>
-            <button type="submit" class="boton"> Log in</button>
             <br>
-            <a href="/register">Crear cuenta</a>
+            <br>
+            <br>
+            <br>
+        </form>
         </div>
 
   </main>  
-  <footer>
+  <%- include("./partials/footer") %> 
+  <!-- <footer>
     <div class="container_footer">
         <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
         <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
         <a href="#"><i class="fas fa-truck"></i>Envios</a>
         <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
     </div>
-</footer>
+</footer> -->
 </body>
 </html>

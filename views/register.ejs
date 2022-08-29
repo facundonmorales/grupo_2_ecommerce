@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link class="ico-pestaña"rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Registro</title>
-</head>
+</head> -->
+<%- include("./partials/head") %>
 <body>
-    <header>
+    <!-- <header>
         <div class="container">
             <nav>
                 <a class="menu" href="">
@@ -31,12 +32,13 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
+    <%- include("./partials/header")  %> 
   <main>
         <div class="Registro">
             <h1>Registrate</h1>
             <br>
-            <form action="/register" method="post"></form>
+            <form action="/register" method="post">
             <input type="text" placeholder="Nombre">
             <br>
             <input type="text" placeholder="Apellido">
@@ -47,19 +49,21 @@
             <br>
             <input type="password" placeholder="Contraseña">
             <br>
-            <a href="/login"><span>¿Ya eres miembro?  </span>Inicia tu sesión</a>
+            <a href="./login"><span>¿Ya eres miembro?  </span>Inicia tu sesión</a>
             <br>
             <button type="submit" class="boton"> Registrarse</button>
+        </form>
         </div>
 
   </main>  
-  <footer>
+  <!-- <footer>
     <div class="container_footer">
         <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
         <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
         <a href="#"><i class="fas fa-truck"></i>Envios</a>
         <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
     </div>
-</footer>
+</footer> -->
+<%- include("./partials/footer") %> 
 </body>
 </html>

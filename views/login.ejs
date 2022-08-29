@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,10 @@
     <link class="ico-pestaña"rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     
     <title>Login</title>
-</head>
+</head> -->
+<%- include("./partials/head") %>
 <body>
-    <header>
+    <!-- <header>
         <div class="container">
             <nav>
                 <a class="menu" href="">
@@ -32,31 +33,34 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
+    <%- include("./partials/header")  %> 
   <main>
         <div class="login">
             <h1>Iniciar sesión</h1>
-            <form action="/login" method="post"></form>
+            <form action="/login" method="post">
             
             <input type="email" placeholder="Email">
             <br>
             <input type="password" placeholder="Contraseña">
             <br>
-            <a href="/pass">¿Olvidaste tu contraseña?</a>
+            <a href="./pass">¿Olvidaste tu contraseña?</a>
             <br>
             <button type="submit" class="boton"> Log in</button>
             <br>
-            <a href="/register">Crear cuenta</a>
+            <a href="./register">Crear cuenta</a>
+        </form>
         </div>
 
   </main>  
-  <footer>
+  <!-- <footer>
     <div class="container_footer">
         <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
         <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
         <a href="#"><i class="fas fa-truck"></i>Envios</a>
         <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
     </div>
-</footer>
+</footer> -->
+<%- include("./partials/footer") %> 
 </body>
 </html>

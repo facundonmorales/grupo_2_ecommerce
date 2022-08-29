@@ -8,6 +8,7 @@
 
 body{
     background-color: #fafbfc;
+    
 }
 
 div.container nav {
@@ -67,9 +68,18 @@ nav .menu{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 7%;
-    padding:0 auto
+    margin: 5%;
+    margin-left: 25%;
+    padding:0 auto;
+    width: 50vw ;
+    height: 60vh;
     
+}
+
+form input {
+    width: 50vw ;
+    margin: 3px;
+    margin: 1%;
 }
 .boton {
     background-color: black;
@@ -78,6 +88,18 @@ nav .menu{
     height: 50px;
     font-size: 15px;
     border-radius: 4px;
+
+}
+form button {
+
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 50vw ;
+    margin: 1%;
 
 }
 h1 {

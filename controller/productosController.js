@@ -1,7 +1,14 @@
+
+
 const productosController = {
-    show: (req, res) => {
-        res.render("productosdetalle")
-    }
+    mostrarTodos:(req, res) => {
+        res.send('Todos los productos')},
+
+    mostrarPorId : (req, res) => {
+        res.render('productosdetalle')},
+
+    crearProducto : (req, res) => {
+        res.send('Crea un producto')}
 }
 
 module.exports= productosController;

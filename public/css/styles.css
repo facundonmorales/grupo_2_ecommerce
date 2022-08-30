@@ -457,6 +457,12 @@ p.slogans b{
         transition: 0.5s;
 
     }
+    .mainhome section .product:hover{
+        transition: 0.3s;
+        -webkit-box-shadow: 0px 3px 14px 1px rgba(145,145,145,0.82);
+        -moz-box-shadow: 0px 3px 14px 1px rgba(145,145,145,0.82);
+        box-shadow: 0px 3px 14px 1px rgba(145,145,145,0.82);
+    }
     .mainhome picture{
         width: 100%;
         height: 70%;

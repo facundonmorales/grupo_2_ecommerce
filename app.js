@@ -7,19 +7,11 @@ app.use(express.static(__dirname + '/public'));
 
 app.set("view engine","ejs");
 
-const rutaCarrito= require("./routes/routes.carrito")
-
-app.use('/carrito', rutaCarrito);
-
-const usersRouter = require('./routes/routes.users') 
-
-app.use('/users',usersRouter)
 
 
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
-});
-
+});*/
 
 // app.get('/login', (req,res)=>{
 //     res.sendFile(__dirname + '/views/login.html');
@@ -42,6 +34,18 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Servidor funcionando');
 });
+
+const rutaCarrito= require("./routes/routes.carrito")
+
+app.use('/carrito', rutaCarrito);
+
+const usersRouter = require('./routes/routes.users') 
+
+app.use('/users',usersRouter)
+
+const homeRouter = require('./routes/routes.home')
+
+app.use('/', homeRouter);
 
 const rutaProductos= require("./routes/routesProductos")
 

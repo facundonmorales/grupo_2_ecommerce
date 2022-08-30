@@ -13,7 +13,7 @@ const usuariosControllers = {
 
         res.render('register');
 
-    }
+    },
 }
 
 module.exports = usuariosControllers;

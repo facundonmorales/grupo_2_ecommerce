@@ -21,6 +21,9 @@ const homeController = {
 
         res.render('productosdetalle');
     },
+    pass: (req, res) => {
+        res.render('pass');
+    }
 };
 
 module.exports = homeController;

@@ -269,6 +269,22 @@ h1 {
     padding: 10px;
     /* border-style: unset; */
     border-color: grey;
+    transition: border-color, .05s;
+}
+
+/* agregador 11/09/2022 ///////////////////// */
+.Registro  :hover{ 
+    border-color: rgb(52, 169, 236);
+
+}
+.login  :hover{ 
+    border-color: rgb(52, 169, 236);
+
+}
+
+.pass :hover{ 
+    border-color: rgb(52, 169, 236);
+
 }
 
 .carrito {

@@ -34,24 +34,24 @@
         </div>
     </header> -->
     <%- include("./partials/headerHome")  %> 
-  <main>
+    <main>
         <div class="Registro">
             <h1>Crear Productos</h1>
             <br>
-            <form action="/" method="post">
-            <input type="text" placeholder="nombre">
+            <form action="/crear" method="POST" enctype="multipart/form-data">
+            <input type="text" placeholder="nombre" name="nombre">
             <br>
-            <input type="text" placeholder="precio">
+            <input type="text" placeholder="precio" name="precio">
             <br>
-            <button type="submit" class="boton"> Seleccionar Imagen</button>
+                <input type="file" name="fotoProducto">
             <br>
-            <input type="text" placeholder="caracteristicas">
+            <input type="text" placeholder="caracteristicas" name="caracteristicas">
             <br>
             <button type="submit" class="boton"> Crear</button>
         </form>
         </div>
 
-  </main>  
+  </main>
   <!-- <footer>
     <div class="container_footer">
         <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>

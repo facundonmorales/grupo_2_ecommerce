@@ -67,6 +67,7 @@ const listadoProductos = [{
     precio: 49.99,
     caracteristicas:'Herramienta la cual permite la visualización en mejor escala de objetos que se encuentran en entornos virtuales.',
     imagen:'gafasrealidadaumentada.jpg'
+},
 {
     id: 11,
     nombre: 'Televisores',
@@ -138,5 +139,10 @@ const listadoProductos = [{
     caracteristicas:'Herramienta que se utiliza en dispositivos móviles enfocado especiales en el área de diseño digital.',
     imagen:'boligrafointeligente.jpg'
 }]
+
+
+ const pro=JSON.stringify(listadoProductos);
+// // const JsonStringify=listadoProductos;
+ console.log(pro);
 
 module.exports = listadoProductos;

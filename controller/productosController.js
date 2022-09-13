@@ -1,20 +1,50 @@
+const fs = require('fs');
+const path = require('path');
+
+const direccionProductos = path.join(__dirname, '../listadoProductos.json')
 
 
 const productosController = {
-    mostrarTodos:(req, res) => {
-        res.send('Todos los productos')},
+    mostrarTodos: (req, res) => {
+        res.send('Todos los productos')
+    },
 
-    mostrarPorId : (req, res) => {
-        res.render('productosdetalle')},
+    mostrarPorId: (req, res) => {
+        res.render('productosdetalle')
+    },
 
-    crearProducto : (req, res) => {
-        res.render('productCreate')},
+    crearProducto: (req, res) => {
+        res.render('productCreate')
+    },
+
+    modificarProducto: (req, res) => {
+        let productos2 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+        let idproduc = parseInt(req.params.idUser)
+        let use = productos2.find((u) => u.id === idproduc);
+        if (use) { res.render("productEdition", { use }) }
+    },
     
-    modificarProducto : (req, res) => {
-        res.render('productEdition')}
+    actualizarProducto: (req,res) => {
+        let productos2 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+        let nuevo= req.body;
+        let nuevoArchivo = req.file;
+        let idproduc = parseInt(req.params.idUser)
+        let use = productos2.find((u) => u.id === idproduc);
+        if(use & nuevo){
+            use.id= nuevo.id;
+            use.nombre= nuevo.nombre;
+            use.precio= nuevo.precio;
+            use.caracteristicas= nuevo.caracteristicas;
+            if(nuevoArchivo){
+                use.imagen= req.file.filename
+            }
+
+        }
+    }
+
 }
 
-module.exports= productosController;
+module.exports = productosController;
 
 
 /*function (req, res){

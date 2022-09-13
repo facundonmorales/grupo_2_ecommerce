@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head") %>
+<%- include("./partials/head") %>
 
-<body>
-    <%- include("./partials/headerHome")  %> 
-    <main>
-        <div class="Registro">
-            <h1>Editar Productos</h1>
-            <br>
-            <form action="/" method="post">
-            <input type="text" placeholder="¿Cuál producto quieres modificar? (pon el ID)">
-                <br>
-            <input type="text" placeholder="nombre">
-            <br>
-            <input type="text" placeholder="precio">
-            <br>
-            <button type="submit" class="boton"> Seleccionar Imagen</button>
-            <br>
-            <input type="text" placeholder="caracteristicas">
-            <br>
-            <button type="submit" class="boton"> Modificar</button>
-        </form>
-        </div>
+    <body>
+        <%- include("./partials/headerHome") %>
+            <main>
+                <div class="Registro">
+                    <h1>Editar Productos</h1>
+                    <br>
+                    <form action="/modificar/<%= use.id %>?_method=PUT" method="post">
+                        <input type="text" placeholder="¿Cuál producto quieres modificar? (pon el ID)"
+                            value="<%= use.id %> ">
+                        <br>
+                        <input type="text" placeholder="nombre" value="<%= use.nombre %> ">
+                        <br>
+                        <input type="text" placeholder="precio" value="<%= use.precio %> ">
+                        <br>
+                        <button type="submit" class="boton"> Seleccionar Imagen</button>
+                        <br>
+                        <input type="text" placeholder="caracteristicas" value="<%= use.caracteristicas %> ">
+                        <br>
+                        <button type="submit" class="boton"> Modificar <a href="/actualizar/:idUser"></a></button>
+                    </form>
+                </div>
 
-  </main>  
-  <%- include("./partials/footer") %>
-</body>
+            </main>
+            <%- include("./partials/footer") %>
+    </body>
 
 </html>
-
-

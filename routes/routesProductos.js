@@ -6,6 +6,17 @@ const router = express.Router();
 
 router.get('/id', productosController.mostrarPorId);
 router.get('/crear', productosController.crearProducto);
-router.get('/modificar', productosController.modificarProducto);
 
+
+
+
+
+
+
+
+
+
+
+router.get('/modificar/:idUser', productosController.modificarProducto);
+router.put('/actualizar/:idUser', productosController.actualizarProducto);
 module.exports = router;

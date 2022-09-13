@@ -28,8 +28,8 @@ router.get('/carrito', homeController.carrito);
 router.get('/detalle', homeController.detalle);
 
 
-router.get('/crear', homeController.crearProducto);
-router.post('/crear', upload.single('fotoProducto'),homeController.store);
+// router.get('/crear', homeController.crearProducto);
+// router.post('/crear', upload.single('fotoProducto'),homeController.store);
 
 
 module.exports = router;

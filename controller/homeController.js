@@ -6,9 +6,11 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const homeController = {
     index: (req, res) => {
-
-        res.render('index');
-
+        const productsFilePath = path.join(__dirname, '../listadoProductos.json');
+        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+        res.render('index',{ productos: productos });
+        
     },
     login: (req, res) => {
 

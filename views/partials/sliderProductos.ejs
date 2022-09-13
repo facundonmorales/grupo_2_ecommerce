@@ -1,4 +1,29 @@
-<div class="product">
+<% for (let p of productos) {%> 
+    <div class="product">
+        <a href="/productos/detalleProducto/<%= p.id %>">
+            <picture>
+                <img src="../imagenes/<%= p.imagen %>" alt="">
+            </picture>
+        </a>
+        <div class="detail">
+            <p>
+                <b><%= p.nombre %></b><br>
+                <small>New arrival</small>
+            </p>
+            <samp>$<%= p.precio %></samp>
+        </div>
+        <div class="button">
+            <p class="star">
+                <strong><i class="fas fa-heart"></i></strong>
+            </p>
+            <a href="#" class="añadirCarrito"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </div>
+    <%}%>
+
+
+
+<!-- <div class="product">
     <a href="/productos/detalle">
         <picture>
             <img src="../imagenes/airpods.jpg" alt="">
@@ -220,4 +245,4 @@
         </p>
         <a href="#" class="añadirCarrito"><i class="fas fa-shopping-bag"></i></a>
     </div>
-</div>
+</div> -->

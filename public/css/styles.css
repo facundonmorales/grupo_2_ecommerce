@@ -77,6 +77,14 @@ nav .menu{
     
 }
 
+.pass a,
+.login a,
+.Registro a {
+margin: 10px;
+    
+}
+
+
 form input {
     width: 50vw ;
     margin: 3px;

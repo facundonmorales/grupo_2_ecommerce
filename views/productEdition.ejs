@@ -8,23 +8,26 @@
                 <div class="Registro">
                     <h1>Editar Productos</h1>
                     <br>
-                    <form action="/modificar/<%= use.id %>?_method=PUT" method="post">
-                        <input type="text" placeholder="¿Cuál producto quieres modificar? (pon el ID)"
-                            value="<%= use.id %> ">
+                    <form action="/productos/modificar/<%= use.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        
                         <br>
-                        <input type="text" placeholder="nombre" value="<%= use.nombre %> ">
+                        <input type="text" placeholder="nombre" name="nombre" value="<%= use.nombre %> ">
                         <br>
-                        <input type="text" placeholder="precio" value="<%= use.precio %> ">
+                        <input type="text" placeholder="precio" name="precio" value="<%= use.precio %> ">
                         <br>
-                        <button type="submit" class="boton"> Seleccionar Imagen</button>
+                        <input type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
                         <br>
-                        <input type="text" placeholder="caracteristicas" value="<%= use.caracteristicas %> ">
+                        <input type="text" placeholder="caracteristicas" name="caracteristicas" value="<%= use.caracteristicas %> ">
                         <br>
-                        <button type="submit" class="boton"> Modificar <a href="/actualizar/:idUser"></a></button>
+                        <button type="submit" class="boton"> Modificar </button>
                     </form>
+                    <form action="/productos/borrar/<%= use.id %>?_method=DELETE" method="POST" >
+                        <button type="submit" class="boton"> Eliminar </button>
+                    </form>
+                   
                 </div>
 
-            </main>
+            </main> 
             <%- include("./partials/footer") %>
     </body>
 

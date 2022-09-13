@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: gray;
 }
 
 body{
@@ -383,9 +382,8 @@ p.slogans b{
 @media(max-width: 610px){
     .menu {
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        width: 80%;
+        width: 60%;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -394,6 +392,7 @@ p.slogans b{
         background-color: var(--color2);
         transition: all 0.2s ease-in-out;
     }
+    
     .menu li {margin-top: 40px;}
     .menu li a {padding: 10px;}
     .open-menu , .close-menu {display: block;}
@@ -504,6 +503,9 @@ p.slogans b{
         font-size: 20px;
         color: #444;
     }
+    .star i {
+        color: brown;
+    }
     small{color: #555;}
 
     a.añadirCarrito{
@@ -514,6 +516,7 @@ p.slogans b{
         display: inline-block;
         background: #000000;
         color: white;
+        border-radius: 6px;
     }
     p.fav{
         margin: 5px auto;

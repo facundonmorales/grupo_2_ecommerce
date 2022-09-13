@@ -25,7 +25,7 @@ router.get('/login', usersController.login);
 router.get('/register', homeController.register);
 router.get('/pass', homeController.pass);
 router.get('/carrito', homeController.carrito);
-router.get('/detalle-producto', homeController.detalle);
+router.get('/detalle', homeController.detalle);
 
 
 router.get('/crear', homeController.crearProducto);

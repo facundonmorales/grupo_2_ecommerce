@@ -57,7 +57,7 @@ const productosController = {
         productos.push(productoNuevo);
 
         const data = JSON.stringify(productos, null, " ");
-        fs.writeFileSync(productsFilePath, data);
+        fs.writeFileSync(direccionProductos, data);
 
         // Do the magic
 

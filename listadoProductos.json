@@ -1,12 +1,5 @@
 [
  {
-  "id": 1,
-  "nombre": "Airpods",
-  "precio": 217.5,
-  "caracteristicas": "Auriculares inalámbricos, resistentes al agua con una duración de 6 horas de carga podrás contestar llamadas mientras escuchas música sin tener que cambiar de dispositivo, te permiten presionarlos para pausar o reproducir.",
-  "imagen": "airpods.jpg"
- },
- {
   "id": 2,
   "nombre": "Asistente de Voz",
   "precio": 57.5,
@@ -29,9 +22,9 @@
  },
  {
   "id": 5,
-  "nombre": "Computador",
-  "precio": 2000,
-  "caracteristicas": "Maquina electrónica la cual permite realizar una variedad de tareas, como almacenamiento de archivos multimedia envió y recepción de los mismos entre otros.",
+  "nombre": "lakra",
+  "precio": "77",
+  "caracteristicas": "Maquina electrónica la cual permite realizar una variedad de tareas, como almacenamiento de archivos multimedia envió y recepción de los mismos entre otros. ",
   "imagen": "computador.jpg"
  },
  {
@@ -159,26 +152,5 @@
   "caracteristicas": "Conoce el nuevo Echo Dot - Nuestro parlante inteligente más popular con Alexa. Este diseño elegante y compacto ofrece voces nítidas y bajos equilibrados, para un sonido completo. Controla por voz tu entretenimiento - Reproduce canciones en línea desde Amazon Music, Apple Music, Spotify, Sirius XM, y más. Reproduce música, audiolibros y podcasts en tu casa, con música multihabitación. Lista para ayudar - Pídele a Alexa que te cuente un chiste, reproduzca música, conteste preguntas, ponga las noticias, revise el pronóstico del tiempo, configure alarmas y más. Controla tu hogar inteligente - Usa tu voz para encender luces, ajustar termostatos, y bloquear puertas con dispositivos compatibles. Conéctate con otros - Llama a casi cualquier persona, con manos libres. Pasa por otras habitaciones instantáneamente o anuncia a toda la casa que la cena está lista. Diseñado para proteger tu privacidad - Fabricado con múltiples niveles de protección y controles de privacidad, incluyendo un botón para apagar el micrófono, que desconecta electrónicamente los micrófonos.",
   "precio": "19999",
   "imagen": "1663112482273-D_NQ_NP_689386-MLA44507900984_012021-O.webp"
- },
- {
-  "id": 1663112697732,
-  "nombre": "Amazon Echo Dot 4ta Generacion Alexa Parlante Inteligente",
-  "caracteristicas": "Conoce el nuevo Echo Dot - Nuestro parlante inteligente más popular con Alexa. Este diseño elegante y compacto ofrece voces nítidas y bajos equilibrados, para un sonido completo. Controla por voz tu entretenimiento - Reproduce canciones en línea desde Amazon Music, Apple Music, Spotify, Sirius XM, y más. Reproduce música, audiolibros y podcasts en tu casa, con música multihabitación. Lista para ayudar - Pídele a Alexa que te cuente un chiste, reproduzca música, conteste preguntas, ponga las noticias, revise el pronóstico del tiempo, configure alarmas y más. Controla tu hogar inteligente - Usa tu voz para encender luces, ajustar termostatos, y bloquear puertas con dispositivos compatibles. Conéctate con otros - Llama a casi cualquier persona, con manos libres. Pasa por otras habitaciones instantáneamente o anuncia a toda la casa que la cena está lista. Diseñado para proteger tu privacidad - Fabricado con múltiples niveles de protección y controles de privacidad, incluyendo un botón para apagar el micrófono, qu",
-  "precio": "19999",
-  "imagen": "1663112697723-D_NQ_NP_689386-MLA44507900984_012021-O.webp"
- },
- {
-  "id": 1663112803298,
-  "nombre": "Amazon Echo Dot 4ta Generacion Alexa Parlante Inteligente",
-  "caracteristicas": "Conoce el nuevo Echo Dot - Nuestro parlante inteligente más popular con Alexa. Este diseño elegante y compacto ofrece voces nítidas y bajos equilibrados, para un sonido completo. Controla por voz tu entretenimiento - Reproduce canciones en línea desde Amazon Music, Apple Music, Spotify, Sirius XM, y más. Reproduce música, audiolibros y podcasts en tu casa, con música multihabitación. Lista para ayudar - Pídele a Alexa que te cuente un chiste, reproduzca música, conteste preguntas, ponga las noticias, revise el pronóstico del tiempo, configure alarmas y más. Controla tu hogar inteligente - Usa tu voz para encender luces, ajustar termostatos, y bloquear puertas con dispositivos compatibles. Conéctate con otros - Llama a casi cualquier persona, con manos libres. Pasa por otras habitaciones instantáneamente o anuncia a toda la casa que la cena está lista. Diseñado para proteger tu privacidad - Fabricado con múltiples niveles de protección y controles de privacidad, incluyendo un botón para apagar el micrófono, qu",
-  "precio": "19999",
-  "imagen": "1663112803287-D_NQ_NP_689386-MLA44507900984_012021-O.webp"
- },
- {
-  "id": 1663112903225,
-  "nombre": "Amazon Echo Dot 4ta Generacion Alexa Parlante Inteligente",
-  "caracteristicas": "Conoce el nuevo Echo Dot - Nuestro parlante inteligente más popular con Alexa. Este diseño elegante y compacto ofrece voces nítidas y bajos equilibrados, para un sonido completo. Controla por voz tu entretenimiento - Reproduce canciones en línea desde Amazon Music, Apple Music, Spotify, Sirius XM, y más. Reproduce música, audiolibros y podcasts en tu casa, con música multihabitación. Lista para ayudar - Pídele a Alexa que te cuente un chiste, reproduzca música, conteste preguntas, ponga las noticias, revise el pronóstico del tiempo, configure alarmas y más. Controla tu hogar inteligente - Usa tu voz para encender luces, ajustar termostatos, y bloquear puertas con dispositivos compatibles. Conéctate con otros - Llama a casi cualquier persona, con manos libres. Pasa por otras habitaciones instantáneamente o anuncia a toda la casa que la cena está lista. Diseñado para proteger tu privacidad - Fabricado con múltiples niveles de protección y controles de privacidad, incluyendo un botón para apagar el micrófono, qu",
-  "precio": "9.999,00",
-  "imagen": "1663112903217-D_NQ_NP_689386-MLA44507900984_012021-O.webp"
  }
 ]

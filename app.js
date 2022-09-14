@@ -3,10 +3,13 @@ const express = require('express');
 const app = express();
 
 
+
 app.use(express.static(__dirname + '/public'));
 
 app.set("view engine","ejs");
 
+const methodOverride= require("method-override");
+app.use(methodOverride("_method"));
 
 
 /*app.get('/', (req, res) => {
@@ -31,9 +34,9 @@ app.set("view engine","ejs");
 // app.get('/Carrito', (req, res) => {
 //     res.sendFile(__dirname + '/views/productCart.html')
 // })
-app.listen(3000, () => {
-    console.log('Servidor funcionando');
-});
+// app.listen(3000, () => {
+//     console.log('Servidor funcionando');
+// });
 
 const rutaCarrito= require("./routes/routes.carrito")
 
@@ -50,3 +53,7 @@ app.use('/', homeRouter);
 const rutaProductos= require("./routes/routesProductos")
 
 app.use('/productos', rutaProductos);
+
+app.listen(3000, () => {
+    console.log('Servidor funcionando');
+});

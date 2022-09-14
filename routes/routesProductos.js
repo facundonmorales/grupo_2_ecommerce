@@ -28,4 +28,15 @@ router.get('/detalleProducto/:id', productosController.detalle);
 
 router.get('/crear', productosController.crearProducto);
 router.post('/crear', upload.single('fotoProducto'),productosController.store);
+
+// router.get('/detalle', productosController.mostrarPorId);
+// router.get('/id', productosController.mostrarPorId);
+// router.get('/crear', productosController.crearProducto);
+
+
+router.get('/modificar/:idUser', productosController.modificarProducto);
+router.put('/modificar/:idUser', upload.single("imagen"), productosController.actualizarProducto);
+router.delete("/borrar/:idUser", productosController.borrarProducto )
+
 module.exports = router;
+

@@ -26,7 +26,7 @@ router.get('/modificar', productosController.modificarProducto);
 
 router.get('/detalleProducto/:id', productosController.detalle);
 
-router.get('/crear', productosController.crearProducto);
+// router.get('/crear', productosController.crearProducto);
 router.post('/crear', upload.single('fotoProducto'),productosController.store);
 
 // router.get('/detalle', productosController.mostrarPorId);

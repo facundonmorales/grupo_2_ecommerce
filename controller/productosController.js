@@ -29,9 +29,7 @@ const productosController = {
 
         res.render('productosdetalle',{ producto: producto });
     },
-    modificarProducto: (req, res) => {
-        res.render('productEdition')
-    },
+  
 
     crearProducto: (req, res) => {
         res.render('productCreate')

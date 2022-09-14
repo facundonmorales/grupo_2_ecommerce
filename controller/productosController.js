@@ -2,7 +2,7 @@
 
 const productosController = {
     mostrarTodos:(req, res) => {
-        res.send('Todos los productos')},
+        res.render('productos')},
 
     mostrarPorId : (req, res) => {
         res.render('productosdetalle')},

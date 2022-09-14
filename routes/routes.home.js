@@ -21,13 +21,6 @@ const upload = multer({storage})
 const router = express.Router();
 
 router.get('/', homeController.index);
-router.get('/login', usersController.login);
-router.get('/register', homeController.register);
-router.get('/pass', homeController.pass);
-router.get('/carrito', homeController.carrito);
-router.get('/detalle', homeController.detalle);
-
-
 router.get('/crear', homeController.crearProducto);
 router.post('/crear', upload.single('fotoProducto'),homeController.store);
 

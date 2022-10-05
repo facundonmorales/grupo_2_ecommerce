@@ -1,10 +1,34 @@
 [
-    {
-        "id": "1",
-        "firstName": "Matias",
-        "lastName": "Ferreyra",
-        "email": "xxxxx@hotmail,com",
-        "category": "xxxxx@hotmail,com",
-        "image": "imagen-imagen"
-    }
+ {
+  "Id": 1664883675573,
+  "nombre": "Paula",
+  "apellido": "briceno",
+  "telefono": "1139292910",
+  "email": "pola23paula@gmail.com",
+  "password": "$2a$15$d1PXiLj7PLlOY/TPTEiKz.tBRWB8/3bwsfiGvJWxrNLAXQiWsi1Dm"
+ },
+ {
+  "Id": 1664890850689,
+  "nombre": "Manuel alejandro",
+  "apellido": "Ugalde Oliveros",
+  "telefono": "11233939494",
+  "email": "manugaldecv@gmail.com",
+  "password": "$2a$15$2I0pmDLJtaobLq0nT1uQ3.uh/wqebYhJSRzWyUJ54KwjYZsoN5ap6"
+ },
+ {
+  "Id": 1664923106637,
+  "nombre": "arturo armando",
+  "apellido": "Ascanio sanchez ",
+  "telefono": "1130425711",
+  "email": "ugodigitalltdcompany@gmail.com",
+  "password": "$2a$15$phrR0hEqhhRmJIJ/nTUFQ.YQwGW5RytU1diQ28I/15ysd5Jab32em"
+ },
+ {
+  "Id": 1664933295158,
+  "nombre": "Matias",
+  "apellido": "ferreyra",
+  "telefono": "1127374740",
+  "email": "mathiasferreyra@gmail.com",
+  "password": "$2a$15$MnzflLu65eDXhkIUjOACSe8lCi3YNZDtKsuNGWCDtfkpHh8.GgMRO"
+ }
 ]

@@ -9,10 +9,6 @@
  },
  {
   "Id": 1664890850689,
-  "nombre": "Manuel alejandro",
-  "apellido": "Ugalde Oliveros",
-  "telefono": "11233939494",
-  "email": "manugaldecv@gmail.com",
   "password": "$2a$15$2I0pmDLJtaobLq0nT1uQ3.uh/wqebYhJSRzWyUJ54KwjYZsoN5ap6"
  },
  {
@@ -32,11 +28,28 @@
   "password": "$2a$15$MnzflLu65eDXhkIUjOACSe8lCi3YNZDtKsuNGWCDtfkpHh8.GgMRO"
  },
  {
-  "Id": 1665091924430,
-  "nombre": "Facundo",
-  "apellido": "Morales",
-  "telefono": "299555777",
-  "email": "facundomorales124@gmail.com",
-  "password": "$2a$15$.KwcFawIv0qKLuDmqc7lVOGHff2j7z.WXF5gInpiSuR.voexNUpiq"
+  "Id": 1665033842971,
+  "nombre": "roberto",
+  "apellido": "carlos",
+  "telefono": "12343445",
+  "email": "uma.union7@gmail.com",
+  "password": "$2a$15$kSdPCR1oy5H/sLZnh4kZuOzhGI/xdmFHYoZpylfbjN2SQppACl2bK"
+ },
+ {
+  "Id": 1665093931137,
+  "nombre": "leonel ",
+  "apellido": "messi",
+  "telefono": "1125301850",
+  "email": "leomessi@gmail.com",
+  "password": "$2a$15$GKaSCDegJNsbr4iZ.EactOAWXcIwfkA.BFW7WgCCbvLch7u6/AK1a"
+ },
+ {
+  "Id": 1665094568199,
+  "nombre": "cristiano",
+  "apellido": "ronaldo",
+  "telefono": "30202030032",
+  "email": "cristiano@gmail.com",
+  "imagen": "default-image.png",
+  "password": "$2a$15$OYFgy3RkJ.THll8Hn1Pute/Ux2Anh.SbM25uWhBiun374MwZThJye"
  }
 ]

@@ -96,8 +96,7 @@ const productosController = {
         if (nuevoArchivo) {
             use.imagen = req.file.filename
         }
-        console.log(nuevo);
-        console.log(use);
+       
         const nano = JSON.stringify(productos2, null, " ");
         fs.writeFileSync(direccionProductos, nano);
 

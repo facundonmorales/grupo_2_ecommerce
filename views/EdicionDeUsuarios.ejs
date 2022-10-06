@@ -8,7 +8,7 @@
                 <div class="Registro">
                     <h1>Editar Usuario</h1>
                     <br>
-                    <form action="/users/modificar/<%= usu.Id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form action="/users/Editar/<%= usu.Id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
                         <br>
                         <input type="text" placeholder="nombre" name="nombre" value="<%= usu.nombre %> ">
@@ -18,6 +18,8 @@
                         <input type="text" placeholder="telefono" name="telefono" value="<%= usu.telefono %> ">
                         <br>
                         <input type="text" placeholder="email" name="email" value="<%= usu.email %> ">
+                        <br>
+                        <input type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
                         <br>
                         <button type="submit" class="boton"> Modificar </button>
                     </form>

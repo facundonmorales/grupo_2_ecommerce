@@ -14,10 +14,9 @@
   "imagen": "aspiradorainteligente.jpg"
  },
  {
-  "id": 4,
-  "nombre": "Reloj Inteligente",
+  "nombre": "Reloj Super Inteligente ",
   "precio": 57.5,
-  "caracteristicas": "Dispositivo el cual permite conectarse a varios dispositivos móviles para realizar funciones como recepción de notificaciones además de contar con sensores para la medición de ritmo cardiaco, presión en la sangre, oxigeno en la sangre entre otras.",
+  "caracteristicas": "Dispositivo el cual permite conectarse a varios dispositivos móviles para realizar funciones como recepción de notificaciones además de contar con sensores para la medición de ritmo cardiaco, presión en la sangre, oxigeno en la sangre entre otras. ",
   "imagen": "relojinteligente.jpg"
  },
  {

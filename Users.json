@@ -30,5 +30,13 @@
   "telefono": "1127374740",
   "email": "mathiasferreyra@gmail.com",
   "password": "$2a$15$MnzflLu65eDXhkIUjOACSe8lCi3YNZDtKsuNGWCDtfkpHh8.GgMRO"
+ },
+ {
+  "Id": 1665091924430,
+  "nombre": "Facundo",
+  "apellido": "Morales",
+  "telefono": "299555777",
+  "email": "facundomorales124@gmail.com",
+  "password": "$2a$15$.KwcFawIv0qKLuDmqc7lVOGHff2j7z.WXF5gInpiSuR.voexNUpiq"
  }
 ]

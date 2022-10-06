@@ -6,7 +6,7 @@ const direccionProductos = path.join(__dirname, '../listadoProductos.json')
 
 
 // const productsFilePath = path.join(__dirname, '../listadoProductos.json');
-const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+//const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
 
 const productosController = {
     // mostrarTodos: (req, res) => {

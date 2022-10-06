@@ -88,7 +88,7 @@ const usuariosControllers = {
         let idUsuario = parseInt(req.params.IdUser)
         let code = logueo.find((u) => u.Id === idUsuario)
         if (code && nuevoUsuario) {
-            code.Id= nuevoUsuario.Id
+            //code.Id= nuevoUsuario.Id
             code.nombre = nuevoUsuario.nombre
             code.apellido = nuevoUsuario.apellido
             code.telefono = nuevoUsuario.telefono

@@ -1,149 +1,148 @@
 [
-    {
-     "id": 2,
-     "nombre": "Asistente de Voz",
-     "precio": 57.5,
-     "caracteristicas": "Máquina de inteligencia artificial y reconocimiento de voz capaz de realizar procesos t6ales como reproducción y pausa de video, encendido y apagado de luces en casa entre otros tan solo orden de voz.",
-     "imagen": "asistentedevoz.jpg"
-    },
-    {
-     "id": 3,
-     "nombre": "Celular",
-     "precio": 237.5,
-     "caracteristicas": "Dispositivo móvil el cual permite la realización de diversas tareas como administración de documentos, reproducción de audio y video entre otros.",
-     "imagen": "aspiradorainteligente.jpg"
-    },
-    {
-     "id": 4,
-     "nombre": "Reloj Inteligente",
-     "precio": 57.5,
-     "caracteristicas": "Dispositivo el cual permite conectarse a varios dispositivos móviles para realizar funciones como recepción de notificaciones además de contar con sensores para la medición de ritmo cardiaco, presión en la sangre, oxigeno en la sangre entre otras.",
-     "imagen": "relojinteligente.jpg"
-    },
-    {
-     "id": 5,
-     "nombre": "lakra",
-     "precio": "77",
-     "caracteristicas": "Maquina electrónica la cual permite realizar una variedad de tareas, como almacenamiento de archivos multimedia envió y recepción de los mismos entre otros. ",
-     "imagen": "computador.jpg"
-    },
-    {
-     "id": 6,
-     "nombre": "Impresora",
-     "precio": 75,
-     "caracteristicas": "Herramienta inalámbrica la cual se encarga de la impresión de documentos de distintos formatos.",
-     "imagen": "impresora.jpg"
-    },
-    {
-     "id": 7,
-     "nombre": "Tarjetas Inteligentes",
-     "precio": 2.5,
-     "caracteristicas": "Tarjeta integrada con un micro chip el cual permite realizar transacciones de manera más ágil.",
-     "imagen": "tarejtasinteligentes.jpg"
-    },
-    {
-     "id": 8,
-     "nombre": "Mouse",
-     "precio": 13.5,
-     "caracteristicas": "Dispositivo ergonómico el cual se adapta de mejor manera al usuario permitiendo un mejor desarrollo de las actividades a realizar.",
-     "imagen": "mouse.jpg"
-    },
-    {
-     "id": 9,
-     "nombre": "Videobeam",
-     "precio": 299.99,
-     "caracteristicas": "Dispositivo que permite la ilustración a gran escala de archivos multimedia tales como videos, fotografías entre otros.",
-     "imagen": "videobeam.jpg"
-    },
-    {
-     "id": 10,
-     "nombre": "Gafas realidad virtual",
-     "precio": 49.99,
-     "caracteristicas": "Herramienta la cual permite la visualización en mejor escala de objetos que se encuentran en entornos virtuales.",
-     "imagen": "gafasrealidadaumentada.jpg"
-    },
-    {
-     "id": 11,
-     "nombre": "Televisores",
-     "precio": 630,
-     "caracteristicas": "Dispositivo electrónico cuya función principal es la reproducción de archivos multimedia.",
-     "imagen": "tv.jpg"
-    },
-    {
-     "id": 12,
-     "nombre": "Cámaras",
-     "precio": 62.75,
-     "caracteristicas": "Dispositivo de seguridad encargado de captar las imágenes de la zona donde se ubique.",
-     "imagen": "camara.jpg"
-    },
-    {
-     "id": 13,
-     "nombre": "Drone",
-     "precio": 150,
-     "caracteristicas": "Máquina de inteligencia artificial y reconocimiento de voz capaz de realizar procesos t6ales como reproducción y pausa de video, encendido y apagado de luces en casa entre otros tan solo orden de voz.",
-     "imagen": "drone.jpg"
-    },
-    {
-     "id": 14,
-     "nombre": "Ipad",
-     "precio": 1500,
-     "caracteristicas": "Dispositivo móvil con la capacidad de realizar varias tareas como diseño web ilustraciones entre otras.",
-     "imagen": "ipad.jpg"
-    },
-    {
-     "id": 15,
-     "nombre": "Tarjeta Grafica",
-     "precio": 475,
-     "caracteristicas": "Componente encargado de la ilustración visual de los datos que está procesando el dispositivo.",
-     "imagen": "tarjetagrafica.jpg"
-    },
-    {
-     "id": 16,
-     "nombre": "Procesador",
-     "precio": 446,
-     "caracteristicas": "Componente encargado de procesar toda información existente en un dispositivo.",
-     "imagen": "procesador.jpg"
-    },
-    {
-     "id": 17,
-     "nombre": "Cerraduras Inteligentes ",
-     "precio": 500,
-     "caracteristicas": "Dispositivo de seguridad diseñado para restringir el acceso a distintos lugares.",
-     "imagen": "cerradurasinteligentes.jpg"
-    },
-    {
-     "id": 18,
-     "nombre": "Aspiradora Inteligente",
-     "precio": 247.5,
-     "caracteristicas": "Dispositivo de limpieza inalámbrico el cual facilita el aseo del entorno.",
-     "imagen": "aspiradorainteligente.jpg"
-    },
-    {
-     "id": 19,
-     "nombre": "Cargador Portátil",
-     "precio": 49.99,
-     "caracteristicas": "Unidad de carga móvil que permite carga nuestro dispositivo sin necesidad de puerto estático.",
-     "imagen": "cargadorportatil.jpg"
-    },
-    {
-     "id": 20,
-     "nombre": "Bolígrafo Inteligente",
-     "precio": 115,
-     "caracteristicas": "Herramienta que se utiliza en dispositivos móviles enfocado especiales en el área de diseño digital.",
-     "imagen": "boligrafointeligente.jpg"
-    },
-    {
-     "id": 1663020582520,
-     "nombre": "Parlante portatil JBL Go 2",
-     "caracteristicas": "El JBL GO 2 es un altavoz Bluetooth completísimo resistente al agua para llevar contigo a todas partes. Reproduce música de forma inalámbrica a través de Bluetooth hasta 5 horas con calidad de sonido de JBL continua. Gracias a su nuevo diseño resistente al agua IPX7, el GO 2 permite a los amantes de la música llevar su altavoz a la piscina o a la playa. También ofrece una experiencia de llamada telefónica de gran nitidez con su manos libres con cancelación de ruido integrado. Fabricado con un diseño compacto en 12 atractivos colores entre los que elegir, el GO 2 eleva inmediatamente tu estilo a niveles totalmente nuevos.",
-     "precio": "9.999,00",
-     "imagen": "1663020582504-JBL_Go2_Hero_Midnight_Black-1605x1605px.png"
-    },
-    {
-     "id": 1663112365379,
-     "nombre": "Amazon Echo Dot 4ta Generacion Alexa Parlante Inteligente",
-     "caracteristicas": "Conoce el nuevo Echo Dot - Nuestro parlante inteligente más popular con Alexa. Este diseño elegante y compacto ofrece voces nítidas y bajos equilibrados, para un sonido completo. Controla por voz tu entretenimiento - Reproduce canciones en línea desde Amazon Music, Apple Music, Spotify, Sirius XM, y más. Reproduce música, audiolibros y podcasts en tu casa, con música multihabitación. Lista para ayudar - Pídele a Alexa que te cuente un chiste, reproduzca música, conteste preguntas, ponga las noticias, revise el pronóstico del tiempo, configure alarmas y más. Controla tu hogar inteligente - Usa tu voz para encender luces, ajustar termostatos, y bloquear puertas con dispositivos compatibles. Conéctate con otros - Llama a casi cualquier persona, con manos libres. Pasa por otras habitaciones instantáneamente o anuncia a toda la casa que la cena está lista. Diseñado para proteger tu privacidad - Fabricado con múltiples niveles de protección y controles de privacidad, incluyendo un botón para apagar el micrófono, que desconecta electrónicamente los micrófonos.",
-     "precio": "19999",
-     "imagen": "1663112365370-D_NQ_NP_689386-MLA44507900984_012021-O.webp"
-    }
-   ]
+ {
+  "id": 2,
+  "nombre": "Asistente de Voz",
+  "precio": 57.5,
+  "caracteristicas": "Máquina de inteligencia artificial y reconocimiento de voz capaz de realizar procesos t6ales como reproducción y pausa de video, encendido y apagado de luces en casa entre otros tan solo orden de voz.",
+  "imagen": "asistentedevoz.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Celular",
+  "precio": 237.5,
+  "caracteristicas": "Dispositivo móvil el cual permite la realización de diversas tareas como administración de documentos, reproducción de audio y video entre otros.",
+  "imagen": "aspiradorainteligente.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Reloj Inteligente  11",
+  "precio": 57.5,
+  "caracteristicas": "Dispositivo el cual permite conectarse a varios dispositivos móviles para realizar funciones como recepción de notificaciones además de contar con sensores para la medición de ritmo cardiaco, presión en la sangre, oxigeno en la sangre entre otras. ",
+  "imagen": "relojinteligente.jpg"
+ },
+ {
+  "nombre": "televisor",
+  "precio": 1000,
+  "caracteristicas": "televisor 4k",
+  "imagen": "1665098286784-60783fe81a124_360_480!.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Impresora",
+  "precio": 75,
+  "caracteristicas": "Herramienta inalámbrica la cual se encarga de la impresión de documentos de distintos formatos.",
+  "imagen": "impresora.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Tarjetas Inteligentes",
+  "precio": 2.5,
+  "caracteristicas": "Tarjeta integrada con un micro chip el cual permite realizar transacciones de manera más ágil.",
+  "imagen": "tarejtasinteligentes.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Mouse",
+  "precio": 13.5,
+  "caracteristicas": "Dispositivo ergonómico el cual se adapta de mejor manera al usuario permitiendo un mejor desarrollo de las actividades a realizar.",
+  "imagen": "mouse.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "Videobeam",
+  "precio": 299.99,
+  "caracteristicas": "Dispositivo que permite la ilustración a gran escala de archivos multimedia tales como videos, fotografías entre otros.",
+  "imagen": "videobeam.jpg"
+ },
+ {
+  "id": 10,
+  "nombre": "Gafas realidad virtual",
+  "precio": 49.99,
+  "caracteristicas": "Herramienta la cual permite la visualización en mejor escala de objetos que se encuentran en entornos virtuales.",
+  "imagen": "gafasrealidadaumentada.jpg"
+ },
+ {
+  "id": 11,
+  "nombre": "Televisores",
+  "precio": 630,
+  "caracteristicas": "Dispositivo electrónico cuya función principal es la reproducción de archivos multimedia.",
+  "imagen": "tv.jpg"
+ },
+ {
+  "id": 12,
+  "nombre": "Cámaras",
+  "precio": 62.75,
+  "caracteristicas": "Dispositivo de seguridad encargado de captar las imágenes de la zona donde se ubique.",
+  "imagen": "camara.jpg"
+ },
+ {
+  "id": 13,
+  "nombre": "Drone",
+  "precio": 150,
+  "caracteristicas": "Máquina de inteligencia artificial y reconocimiento de voz capaz de realizar procesos t6ales como reproducción y pausa de video, encendido y apagado de luces en casa entre otros tan solo orden de voz.",
+  "imagen": "drone.jpg"
+ },
+ {
+  "id": 14,
+  "nombre": "Ipad",
+  "precio": 1500,
+  "caracteristicas": "Dispositivo móvil con la capacidad de realizar varias tareas como diseño web ilustraciones entre otras.",
+  "imagen": "ipad.jpg"
+ },
+ {
+  "id": 15,
+  "nombre": "Tarjeta Grafica",
+  "precio": 475,
+  "caracteristicas": "Componente encargado de la ilustración visual de los datos que está procesando el dispositivo.",
+  "imagen": "tarjetagrafica.jpg"
+ },
+ {
+  "id": 16,
+  "nombre": "Procesador",
+  "precio": 446,
+  "caracteristicas": "Componente encargado de procesar toda información existente en un dispositivo.",
+  "imagen": "procesador.jpg"
+ },
+ {
+  "id": 17,
+  "nombre": "Cerraduras Inteligentes ",
+  "precio": 500,
+  "caracteristicas": "Dispositivo de seguridad diseñado para restringir el acceso a distintos lugares.",
+  "imagen": "cerradurasinteligentes.jpg"
+ },
+ {
+  "id": 18,
+  "nombre": "Aspiradora Inteligente",
+  "precio": 247.5,
+  "caracteristicas": "Dispositivo de limpieza inalámbrico el cual facilita el aseo del entorno.",
+  "imagen": "aspiradorainteligente.jpg"
+ },
+ {
+  "id": 19,
+  "nombre": "Cargador Portátil",
+  "precio": 49.99,
+  "caracteristicas": "Unidad de carga móvil que permite carga nuestro dispositivo sin necesidad de puerto estático.",
+  "imagen": "cargadorportatil.jpg"
+ },
+ {
+  "id": 20,
+  "nombre": "Bolígrafo Inteligente",
+  "precio": 115,
+  "caracteristicas": "Herramienta que se utiliza en dispositivos móviles enfocado especiales en el área de diseño digital.",
+  "imagen": "boligrafointeligente.jpg"
+ },
+ {
+  "id": 1663020582520,
+  "nombre": "Parlante portatil JBL Go 2",
+  "caracteristicas": "El JBL GO 2 es un altavoz Bluetooth completísimo resistente al agua para llevar contigo a todas partes. Reproduce música de forma inalámbrica a través de Bluetooth hasta 5 horas con calidad de sonido de JBL continua. Gracias a su nuevo diseño resistente al agua IPX7, el GO 2 permite a los amantes de la música llevar su altavoz a la piscina o a la playa. También ofrece una experiencia de llamada telefónica de gran nitidez con su manos libres con cancelación de ruido integrado. Fabricado con un diseño compacto en 12 atractivos colores entre los que elegir, el GO 2 eleva inmediatamente tu estilo a niveles totalmente nuevos.",
+  "precio": "9.999,00",
+  "imagen": "1663020582504-JBL_Go2_Hero_Midnight_Black-1605x1605px.png"
+ },
+ {
+  "id": 1663112365379,
+  "nombre": "Amazon Echo Dot 4ta Generacion Alexa Parlante Inteligente",
+  "caracteristicas": "Conoce el nuevo Echo Dot - Nuestro parlante inteligente más popular con Alexa. Este diseño elegante y compacto ofrece voces nítidas y bajos equilibrados, para un sonido completo. Controla por voz tu entretenimiento - Reproduce canciones en línea desde Amazon Music, Apple Music, Spotify, Sirius XM, y más. Reproduce música, audiolibros y podcasts en tu casa, con música multihabitación. Lista para ayudar - Pídele a Alexa que te cuente un chiste, reproduzca música, conteste preguntas, ponga las noticias, revise el pronóstico del tiempo, configure alarmas y más. Controla tu hogar inteligente - Usa tu voz para encender luces, ajustar termostatos, y bloquear puertas con dispositivos compatibles. Conéctate con otros - Llama a casi cualquier persona, con manos libres. Pasa por otras habitaciones instantáneamente o anuncia a toda la casa que la cena está lista. Diseñado para proteger tu privacidad - Fabricado con múltiples niveles de protección y controles de privacidad, incluyendo un botón para apagar el micrófono, que desconecta electrónicamente los micrófonos.",
+  "precio": "19999",
+  "imagen": "1663112365370-D_NQ_NP_689386-MLA44507900984_012021-O.webp"
+ }
+]

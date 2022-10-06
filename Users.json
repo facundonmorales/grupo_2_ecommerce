@@ -51,5 +51,23 @@
   "email": "cristiano@gmail.com",
   "imagen": "default-image.png",
   "password": "$2a$15$OYFgy3RkJ.THll8Hn1Pute/Ux2Anh.SbM25uWhBiun374MwZThJye"
+ },
+ {
+  "Id": 1665096426911,
+  "nombre": "neymar",
+  "apellido": "el brazileiro",
+  "telefono": "1282838248",
+  "email": "neymar@gmail.com",
+  "imagen": "1665096426906-descarga (12).jpg",
+  "password": "$2a$15$C4e5553XNl5p9p030VBXnOa.bBYhG2N./i9OIjgJpTDega.TXNVsW"
+ },
+ {
+  "Id": 1665096883064,
+  "nombre": "leonel",
+  "apellido": "messi",
+  "telefono": "123848484",
+  "email": "leomessi1@gmail.com",
+  "imagen": "1665096883061-58c1c9d0-43ff-11ed-b3f2-2b3086abdfcf.jpg",
+  "password": "$2a$15$h6OtU0kk2RJLiRx8nZ40VuYhTGtskNUtT4FGl6v8/GI5sny22p.pK"
  }
 ]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/headerHome") %>
+            <main>
+                <div>
+
+                    <section>
+                        <br>
+                        <br>
+                        <div class="detalle">
+
+                            <div class="centrar">
+                                <h3>
+                                    <p>
+                                        <%=p.Id%>
+                                    </p>
+                                </h3>
+                                <br>
+                                <span class="precio">nombre:<%=p.nombre%></span>
+                                <br>
+                                <span class="precio">apellido:<%=p.apellido%></span>
+                                <br>
+                                <span class="precio">telefono:<%=p.telefono%></span>
+                                <br>
+                                <span class="precio">email:<%=p.email%></span>
+                                <br>
+                                <div class="centrar">
+                                    <img src="/imagenes/<%=p.imagen%>" alt="imagen de airpods">
+                                </div>
+
+                                <br>
+                                <button type="submit" class="boton-producto"> Menu principal</button>
+                                <br>
+                                <button type="submit" class="boton-producto"> Borrar</button>
+                                <br>
+
+                                </form>
+                                <button type="submit" class="boton-producto">
+                                    <a href="/users/editar/<%= p.Id %>" class="boton-producto">Editar</a>
+                                </button>
+                            </div>
+                        </div>
+
+                    </section>
+                    <br>
+
+
+                </div>
+            </main>
+            <footer>
+                <div class="container_footer">
+                    <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
+                    <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
+                    <a href="#"><i class="fas fa-truck"></i>Envios</a>
+                    <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
+                </div>
+            </footer>
+            </section>
+            <%- include("./partials/footer") %>
+                </div>
+    </body>
+
+</html>

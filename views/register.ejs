@@ -38,16 +38,18 @@
         <div class="Registro">
             <h1>Registrate</h1>
             <br>
-            <form action="/register" method="post">
-            <input type="text" placeholder="Nombre">
+            <form action="/users/register" method="post" enctype="multipart/form-data"> 
+            <input  name="nombre" type="text" placeholder="Nombre">
             <br>
-            <input type="text" placeholder="Apellido">
+            <input name="apellido" type="text" placeholder="Apellido">
             <br>
-            <input type="tel" placeholder="Telefono">
+            <input name="telefono" type="tel" placeholder="Telefono">
             <br>
-            <input type="email" placeholder="Email">
+            <input name="email" type="email" placeholder="Email">
             <br>
-            <input type="password" placeholder="Contraseña">
+            <input type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
+            <br>
+            <input name="password" type="password" placeholder="Contraseña">
             <br>
             <a href="./login"><span>¿Ya eres miembro?  </span>Inicia tu sesión</a>
             <br>

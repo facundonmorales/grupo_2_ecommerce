@@ -2,54 +2,53 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../listadoProductos.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const homeController = {
     index: (req, res) => {
         const productsFilePath = path.join(__dirname, '../listadoProductos.json');
         const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        
-        res.render('index',{ productos: productos });
-        
-    // },
-    // crearProducto: (req, res) => {
-    //     res.render('productCreate')
-    // },
 
-    // store: (req, res) => {
+        res.render('index', { productos: productos });
+
+        // },
+        // crearProducto: (req, res) => {
+        //     res.render('productCreate')
+        // },
+
+        // store: (req, res) => {
 
 
-    //     const productoNuevo = {
-    //         id: Date.now(),
-    //         nombre: req.body.nombre,
-    //         caracteristicas: req.body.caracteristicas,
-    //         precio: req.body.precio,
-    //         imagen: "default-image.png"
+        //     const productoNuevo = {
+        //         id: Date.now(),
+        //         nombre: req.body.nombre,
+        //         caracteristicas: req.body.caracteristicas,
+        //         precio: req.body.precio,
+        //         imagen: "default-image.png"
 
-    //     };
+        //     };
 
-    //     if (req.file){
+        //     if (req.file){
 
-	// 		productoNuevo.imagen=req.file.filename;
-		
-	// 	}
-    //     const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        // 		productoNuevo.imagen=req.file.filename;
 
-    //     productos.push(productoNuevo);
+        // 	}
+        //     const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-    //     const data = JSON.stringify(productos, null, " ");
-    //     fs.writeFileSync(productsFilePath, data);
+        //     productos.push(productoNuevo);
 
-    //     // Do the magic
+        //     const data = JSON.stringify(productos, null, " ");
+        //     fs.writeFileSync(productsFilePath, data);
 
-    //     console.log('////////////');
-    //     console.log(productos);
-    //     console.log('////////////');
+        //     // Do the magic
 
-    //     res.redirect('/crear')
-    // },
+        //     console.log('////////////');
+        //     console.log(productos);
+        //     console.log('////////////');
 
-}
+        //     res.redirect('/crear')
+        // },
+
+    }
 }
 
 module.exports = homeController;

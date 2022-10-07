@@ -15,17 +15,16 @@
  },
  {
   "id": 4,
-  "nombre": "Reloj Inteligente",
+  "nombre": "Reloj Inteligente  11",
   "precio": 57.5,
-  "caracteristicas": "Dispositivo el cual permite conectarse a varios dispositivos móviles para realizar funciones como recepción de notificaciones además de contar con sensores para la medición de ritmo cardiaco, presión en la sangre, oxigeno en la sangre entre otras.",
+  "caracteristicas": "Dispositivo el cual permite conectarse a varios dispositivos móviles para realizar funciones como recepción de notificaciones además de contar con sensores para la medición de ritmo cardiaco, presión en la sangre, oxigeno en la sangre entre otras. ",
   "imagen": "relojinteligente.jpg"
  },
  {
-  "id": 5,
-  "nombre": "lakra",
-  "precio": "77",
-  "caracteristicas": "Maquina electrónica la cual permite realizar una variedad de tareas, como almacenamiento de archivos multimedia envió y recepción de los mismos entre otros. ",
-  "imagen": "computador.jpg"
+  "nombre": "televisor",
+  "precio": 1000,
+  "caracteristicas": "televisor 4k",
+  "imagen": "1665098286784-60783fe81a124_360_480!.jpg"
  },
  {
   "id": 6,

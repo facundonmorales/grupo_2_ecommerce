@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/headerHome") %>
+            <main>
+                <div class="Registro">
+                    <h1>Editar Usuario</h1>
+                    <br>
+                    <form action="/users/Editar/<%= usu.Id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        
+                        <br>
+                        <input type="text" placeholder="nombre" name="nombre" value="<%= usu.nombre %> ">
+                        <br>
+                        <input type="text" placeholder="apellido" name="apellido" value="<%= usu.apellido %> ">
+                        <br>
+                        <input type="text" placeholder="telefono" name="telefono" value="<%= usu.telefono %> ">
+                        <br>
+                        <input type="text" placeholder="email" name="email" value="<%= usu.email %> ">
+                        <br>
+                        <input type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
+                        <br>
+                        <button type="submit" class="boton"> Modificar </button>
+                    </form>
+                    <form action="/productos/borrar/<%= usu.Id %>?_method=DELETE" method="POST" >
+                        <button type="submit" class="boton"> Eliminar </button>
+                    </form>
+                   
+                </div>
+
+            </main> 
+            <%- include("./partials/footer") %>
+    </body>
+
+</html>

@@ -6,7 +6,7 @@ const direccionProductos = path.join(__dirname, '../listadoProductos.json')
 
 
 // const productsFilePath = path.join(__dirname, '../listadoProductos.json');
-const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+//const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
 
 const productosController = {
     // mostrarTodos: (req, res) => {
@@ -59,11 +59,7 @@ const productosController = {
         const data = JSON.stringify(productos, null, " ");
         fs.writeFileSync(direccionProductos, data);
 
-        // Do the magic
 
-        console.log('////////////');
-        console.log(productos);
-        console.log('////////////');
 
         res.redirect('/productos/crear')
     },
@@ -88,7 +84,8 @@ const productosController = {
         let idproduc = parseInt(req.params.idUser)
         let use = productos2.find((u) => u.id === idproduc)
         if (use && nuevo) {
-            // use.id = nuevo.id;
+
+            //use.id = nuevo.id;
             use.nombre = nuevo.nombre;
             use.precio = Number(nuevo.precio);
             use.caracteristicas = nuevo.caracteristicas;
@@ -96,8 +93,7 @@ const productosController = {
         if (nuevoArchivo) {
             use.imagen = req.file.filename
         }
-        console.log(nuevo);
-        console.log(use);
+       
         const nano = JSON.stringify(productos2, null, " ");
         fs.writeFileSync(direccionProductos, nano);
 

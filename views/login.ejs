@@ -14,8 +14,9 @@
     <title>Login</title>
 </head> -->
 <%- include("./partials/head") %>
-<body>
-    <!-- <header>
+
+    <body>
+        <!-- <header>
         <div class="container">
             <nav>
                 <a class="menu" href="">
@@ -34,26 +35,29 @@
             </nav>
         </div>
     </header> -->
-    <%- include("./partials/headerHome")  %> 
-  <main>
-        <div class="login">
-            <h1>Iniciar sesión</h1>
-            <form action="/login" method="post">
-            
-            <input type="email" placeholder="Email">
-            <br>
-            <input type="password" placeholder="Contraseña">
-            <br>
-            <a href="./pass">¿Olvidaste tu contraseña?</a>
-            <br>
-            <button type="submit" class="boton"> Log in</button>
-            <br>
-            <a href="./register">Crear cuenta</a>
-        </form>
-        </div>
+        <%- include("./partials/headerHome") %>
+            <main>
+                <div class="login">
+                    <h1>Iniciar sesión</h1>
+                    <form action="/users/login" method="post">
 
-  </main>  
-  <!-- <footer>
+                        <input name="email" type="email" placeholder="email">
+                        <br>
+                        <input name="password" type="password" placeholder="Contraseña">
+                        <br>
+                        <a href="./pass">¿Olvidaste tu contraseña?</a>
+                        <br>
+                        <label for="">recordarme</label>
+                        <input type="checkbox"  name="recordarme" value="true">
+                        
+                        <button type="submit" class="boton" value="Login"> Log in</button>
+                        <br>
+                        <a href="./register">Crear cuenta</a>
+                    </form>
+                </div>
+
+            </main>
+            <!-- <footer>
     <div class="container_footer">
         <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
         <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
@@ -61,6 +65,7 @@
         <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
     </div>
 </footer> -->
-<%- include("./partials/footer") %> 
-</body>
+            <%- include("./partials/footer") %>
+    </body>
+
 </html>

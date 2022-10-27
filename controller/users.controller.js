@@ -87,6 +87,7 @@ const usuariosControllers = {
         let nuevoArchivo2 = req.file;
         let idUsuario = parseInt(req.params.IdUser)
         let code = logueo.find((u) => u.Id === idUsuario)
+
         if (code && nuevoUsuario) {
             //code.Id= nuevoUsuario.Id
             code.nombre = nuevoUsuario.nombre
@@ -97,14 +98,16 @@ const usuariosControllers = {
         }
         if (nuevoArchivo2) {
             code.imagen = req.file.filename
-
-
+            
+            
         }
         
+        console.log(nuevoUsuario);
+        console.log(nuevoArchivo2);
+        console.log(idUsuario);
 
         const agregadoUsuario = JSON.stringify(logueo,null," ");
         fs.writeFileSync(loginCangrejo,agregadoUsuario);
-
         res.redirect("/")
 
     },

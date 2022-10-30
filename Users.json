@@ -69,5 +69,14 @@
   "email": "leomessi1@gmail.com",
   "imagen": "1665096883061-58c1c9d0-43ff-11ed-b3f2-2b3086abdfcf.jpg",
   "password": "$2a$15$h6OtU0kk2RJLiRx8nZ40VuYhTGtskNUtT4FGl6v8/GI5sny22p.pK"
+ },
+ {
+  "Id": 1665105320982,
+  "nombre": "Rodry",
+  "apellido": "metalero",
+  "telefono": "19293494949",
+  "email": "rodri@gmail.com",
+  "imagen": "1665105320979-Ã­ndice.jpg",
+  "password": "$2a$15$NnnSYddk4MA08ZYvsjZstumxMxO/BWXL1gjvU1vvKArkuJSJjHFNO"
  }
 ]

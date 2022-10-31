@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const direccionProductos = path.join(__dirname, '../listadoProductos.json')
+const db = require('../database/models')
+
+
+// const direccionProductos = path.join(__dirname, '../listadoProductos.json')
 
 
 
@@ -20,96 +23,208 @@ const productosController = {
     //     res.render('index',{ productos: productos });
         
     // },
-    detalle: (req, res) => {
-        const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-        const producto = productos.filter((p) => p.id == req.params.id);
+    detalle: async (req, res) => {
+        try {
+            // const producto = await db.products.findByPk(req.params.id,{include:["Category"]});
+            const producto = await db.products.findByPk(req.params.id);
+            res.render('productosdetalle', { producto: producto });
 
-        console.log(producto,'///////////////////////////////////////////////');
-
-
-        res.render('productosdetalle',{ producto: producto });
+        } catch (error) {
+            res.send(error)
+        }
+        // res.render('productosdetalle');
     },
+
+
+
+    // detalle: (req, res) => {
+    //     const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+    //     const producto = productos.filter((p) => p.id == req.params.id);
+
+    //     console.log(producto,'///////////////////////////////////////////////');
+
+
+    //     res.render('productosdetalle',{ producto: producto });
+    // },
   
 
     crearProducto: (req, res) => {
         res.render('productCreate')
     },
 
-    store: (req, res) => {
+    store:async (req, res) => {
+        let file = req.file;
 
+        let archivo;
 
-        const productoNuevo = {
-            id: Date.now(),
-            nombre: req.body.nombre,
-            caracteristicas: req.body.caracteristicas,
-            precio: req.body.precio,
-            imagen: "default-image.png"
+        if (file) {
+            archivo = req.file.filename
+        } else {
 
-        };
-
-        if (req.file) {
-
-            productoNuevo.imagen = req.file.filename;
-
+            archivo = "default-image.png"
         }
-        const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+        try {
+            const productoNuevo = await db.products.create({
+                nombre: req.body.nombre,
+                caracteristicas: req.body.caracteristicas,
+                precio: req.body.precio,
+                // id_category: 1,
+                imagen: archivo
 
-        productos.push(productoNuevo);
 
-        const data = JSON.stringify(productos, null, " ");
-        fs.writeFileSync(direccionProductos, data);
+            }
+            );
 
+            console.log({ productoNuevo });
+            res.redirect('/productos/detalleProducto/' + productoNuevo.id_product)
+        } catch (error) {
+            res.send({ error })
+        }
 
-
-        res.redirect('/productos/crear')
     },
+
+    // CONTROLARDOR VIEJO CON JSON
+    // store: (req, res) => {
+
+
+    //     const productoNuevo = {
+    //         id: Date.now(),
+    //         nombre: req.body.nombre,
+    //         caracteristicas: req.body.caracteristicas,
+    //         precio: req.body.precio,
+    //         imagen: "default-image.png"
+
+    //     };
+
+    //     if (req.file) {
+
+    //         productoNuevo.imagen = req.file.filename;
+
+    //     }
+    //     const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+
+    //     productos.push(productoNuevo);
+
+    //     const data = JSON.stringify(productos, null, " ");
+    //     fs.writeFileSync(direccionProductos, data);
+
+
+
+    //     res.redirect('/productos/crear')
+    // },
 
     crearProducto: (req, res) => {
         res.render('productCreate')
     },
 
-    modificarProducto: (req, res) => {
-        let productos2 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-        let idproduc = parseInt(req.params.idUser)
-        let use = productos2.find((u) => u.id === idproduc);
-        if (use) { res.render("productEdition", { use }) }
+    modificarProducto: async (req, res) => {
+        try {
+            const producto = await db.products.findByPk(req.params.idUser);
+            console.log(producto);
+            res.render('productEdition', { producto: producto });
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    
+/// CONTROLARDOR VIEJO CON JSON
+
+    // modificarProducto: (req, res) => {
+    //     let productos2 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+    //     let idproduc = parseInt(req.params.idUser)
+    //     let use = productos2.find((u) => u.id === idproduc);
+    //     if (use) { res.render("productEdition", { use }) }
+    // },
+
+    actualizarProducto: async (req, res) => {
+        let file = req.file;
+
+        let archivo;
+
+        if (file) {
+            archivo = req.file.filename
+        } else {
+
+            archivo = "default-image.png"
+        }
+        try {
+            const productoEditado = await db.products.update({
+                nombre: req.body.nombre,
+                caracteristicas: req.body.caracteristicas,
+                precio: req.body.precio,
+                // id_category: 1,
+                 imagen: archivo
+
+
+            },
+            {
+                where :{
+                    id_product : req.params.idUser
+                }
+            }
+            );
+
+             console.log({ productoEditado });
+            res.redirect('/')
+        } catch (error) {
+            res.send({ error })
+        }
+
     },
 
-    actualizarProducto: (req, res) => {
+    /// CONTROLARDOR VIEJO CON JSON
+    // actualizarProducto: (req, res) => {
 
 
-        let productos2 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-        let nuevo = req.body;
-        let nuevoArchivo = req.file;
-        let idproduc = parseInt(req.params.idUser)
-        let use = productos2.find((u) => u.id === idproduc)
-        if (use && nuevo) {
+    //     let productos2 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+    //     let nuevo = req.body;
+    //     let nuevoArchivo = req.file;
+    //     let idproduc = parseInt(req.params.idUser)
+    //     let use = productos2.find((u) => u.id === idproduc)
+    //     if (use && nuevo) {
 
-            //use.id = nuevo.id;
-            use.nombre = nuevo.nombre;
-            use.precio = Number(nuevo.precio);
-            use.caracteristicas = nuevo.caracteristicas;
-        }
-        if (nuevoArchivo) {
-            use.imagen = req.file.filename
-        }
+    //         //use.id = nuevo.id;
+    //         use.nombre = nuevo.nombre;
+    //         use.precio = Number(nuevo.precio);
+    //         use.caracteristicas = nuevo.caracteristicas;
+    //     }
+    //     if (nuevoArchivo) {
+    //         use.imagen = req.file.filename
+    //     }
        
-        const nano = JSON.stringify(productos2, null, " ");
-        fs.writeFileSync(direccionProductos, nano);
+    //     const nano = JSON.stringify(productos2, null, " ");
+    //     fs.writeFileSync(direccionProductos, nano);
 
-        res.redirect("/")
-    },
-    borrarProducto: (req, res) => {
-        let productos3 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-        let idproduc2 = parseInt(req.params.idUser)
-        let nanot = productos3.filter((u) => u.id !== idproduc2)
-         nanot = JSON.stringify(nanot, null, " ");
-        fs.writeFileSync(direccionProductos, nanot);
-        res.redirect("/")
+    //     res.redirect("/")
+    // },
+    borrarProducto: async(req,res)=>{
+        try {
+            const productoABorrar = await db.products.destroy({
+                where:{
+                    id_product: req.params.idUser
+                }
+            });
+                res.redirect('/')
 
+        } catch (error) {
+            
+            console.log ({error})
 
-
+        }
     }
+
+ /// CONTROLARDOR VIEJO CON JSON  
+    // borrarProducto: (req, res) => {
+    //     let productos3 = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+    //     let idproduc2 = parseInt(req.params.idUser)
+    //     let nanot = productos3.filter((u) => u.id !== idproduc2)
+    //      nanot = JSON.stringify(nanot, null, " ");
+    //     fs.writeFileSync(direccionProductos, nanot);
+    //     res.redirect("/")
+
+
+
+    // }
 }
 
 

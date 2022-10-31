@@ -37,7 +37,7 @@ router.post('/crear', upload.single('fotoProducto'),productosController.store);
 
 router.get('/modificar/:idUser', productosController.modificarProducto);
 router.put('/modificar/:idUser', upload.single("imagen"), productosController.actualizarProducto);
-router.delete("/borrar/:idUser", productosController.borrarProducto )
+router.delete("/borrar/:idUser", productosController.borrarProducto)
 
 module.exports = router;
 

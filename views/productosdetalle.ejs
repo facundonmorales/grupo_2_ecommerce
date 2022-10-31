@@ -6,22 +6,21 @@
     <%- include("./partials/headerHome")  %> 
     <main>
         <div>
-        <% for(let p of producto) {%>
         <section>
             <br>
             <br>
             <div class="detalle">
                 <div class="centrar">
-                    <img  src="/imagenes/<%=p.imagen%>" alt="imagen de airpods">
+                    <img  src="/imagenes/<%=producto.imagen%>" alt="imagen de airpods">
                 </div>
                 <div class="centrar">
                         <h3> 
                            <p>
-                             <%=p.nombre%>
+                             <%=producto.nombre%>
                            </p>
                         </h3>
                     <br>
-                    <span class="precio">$<%=p.precio%></span>
+                    <span class="precio">$<%=producto.precio%></span>
                     <span class="info-envio">0% OFF</span>
                     <br>
                     <p class="info-envio">1 Cuota</p>
@@ -52,7 +51,7 @@
                         <!-- <a href="/products/edit/<%= producto.id %>" class="boton-producto">EDITAR PRODUCTO</a> -->
                     </form>
                     <button type="submit" class="boton-producto">
-                        <a href="/productos/modificar/<%= p.id %>" class="boton-producto">Editar</a>
+                        <a href="/productos/modificar/<%= producto.id_product %>" class="boton-producto">Editar</a>
                     </button>
                 </div>
             </div>
@@ -63,10 +62,9 @@
                 <h3 class="caracteristicas">Características del Producto</h3>
                 <br>
             <div>
-                <p class="descripcion"><%=p.caracteristicas%></p>
+                <p class="descripcion"><%=producto.caracteristicas%></p>
             </div>
         </section>
-        <% }%>
     </div>
     </main>
     <footer>

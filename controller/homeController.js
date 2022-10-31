@@ -1,14 +1,26 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 
-const productsFilePath = path.join(__dirname, '../listadoProductos.json');
+
+// const productsFilePath = path.join(__dirname, '../listadoProductos.json');
 
 const homeController = {
-    index: (req, res) => {
-        const productsFilePath = path.join(__dirname, '../listadoProductos.json');
-        const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    index: async (req, res) => {
+        try {
+            const productos = await db.products.findAll()
+            //console.log(productos);
+            res.render('index',{ producto: productos });
+        } catch (error) {
+        res.send(error)    
+            
+ }
+    //CONTROLADOR VIEJO CON JSON
+ // index: (req, res) => {
+    //     const productsFilePath = path.join(__dirname, '../listadoProductos.json');
+    //     const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-        res.render('index', { productos: productos });
+    //     res.render('index', { productos: productos });
 
         // },
         // crearProducto: (req, res) => {

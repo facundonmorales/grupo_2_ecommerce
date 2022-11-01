@@ -18,6 +18,8 @@ let session = require("express-session")
 
 app.use(session({secret: "esto es un secreto"}))
 
+const sequelize =require("sequelize")
+
 /*app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 });*/
@@ -61,6 +63,17 @@ const rutaProductos= require("./routes/routesProductos");
 
 app.use('/productos', rutaProductos);
 
+new sequelize('krabby_db', 'root', '', {
+    host: 'localhost',
+    dialect: "mysql",
+  })
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
 
 app.listen(3005, () => {

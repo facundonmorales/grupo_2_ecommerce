@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require("bcryptjs");
 const req = require('express/lib/request');
+const db = require('../database/models');
 
 const loginCangrejo = path.join(__dirname, '../Users.json');
 
@@ -11,31 +12,59 @@ const usuariosControllers = {
 
         res.render('login');
     },
-    procesologueo: (req, res) => {
-        const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
-        let usuarioAloguearse;
-        for (let i = 0; i < logueo.length; i++) {
-            if (logueo[i].email == req.body.email && bcrypt.compareSync(req.body.password, logueo[i].password)) {
 
-                usuarioAloguearse = logueo[i];
-                break
+    procesologueo: async (req, res) => {
 
+
+        try {
+            const personita = db.users
+            let usuarioAloguearse;
+            let contraseña = req.body.password
+
+            console.log(contraseña)
+
+            await personita.findOne(
+                {
+                    where: {
+                        email: req.body.email
+                    }
+                })
+            console.log(personita)
+
+            if (bcrypt.compareSync(contraseña, personita.password)) {
+                usuarioAloguearse = personita;
+
+                console.log(personita)
             }
 
-        } if (usuarioAloguearse == undefined) {
-            return res.render('login', {
-                errors: [
-                    { msg: "Credenciales Invalidas" }
-                ]
-            });
-        }
-        req.session.usuarioLogueado = usuarioAloguearse;
+            if (usuarioAloguearse == undefined) {
+                return res.render('login', {
+                    errors: [
+                        { msg: "Credenciales Invalidas" }
+                    ]
+                })
+            }
 
-        if (req.body.recordarme == "true") {
-            res.cookie("recordarme", usuarioAloguearse.email, { maxAge: 100000, httpOnly: true })
+            if (req.body.recordarme == "true") {
+                res.cookie("recordarme", usuarioAloguearse.email, { maxAge: 100000, httpOnly: true })
+            }
 
+            req.session.usuarioLogueado = usuarioAloguearse
+            res.render("usuarioDetalle", { p: usuarioAloguearse })
         }
-        res.render("usuarioDetalle", { p: usuarioAloguearse })
+
+
+
+
+        catch (error) {
+            res.send("hubo un error" + error)
+        }
+
+
+
+
+
+
     }
 
     ,
@@ -50,78 +79,160 @@ const usuariosControllers = {
         res.render('register');
 
     },
-    registroDeUsuarios: (req, res) => {
+    registroDeUsuarios: async (req, res) => {
+        let file = req.file;
 
-        const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
-        const usuarioN = {
-            Id: Date.now(),
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            telefono: req.body.telefono,
-            email: req.body.email,
-            imagen: "default-image.png",
-            password: bcrypt.hashSync(req.body.password, 15)
+        let archivo;
 
+        if (file) {
+            archivo = req.file.filename
+        } else {
+            archivo = "default-image.png"
+        }
+        try {
+            const usuarioN = await db.users.create({
+
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                telefono: req.body.telefono,
+                email: req.body.email,
+                imagen: archivo,
+                password: bcrypt.hashSync(req.body.password, 15)
+
+            });
+
+            res.redirect("/users/login")
+        } catch (error) {
+            res.send({ error })
+        }
+    },
+
+
+
+
+    // nuevo controlador de editar Usuario
+    editarUsuario: async (req, res) => {
+        try {
+            const logueo = await db.users.findByPk(req.params.idUser)
+            res.render("EdicionDeUsuarios", { usu: logueo })
+
+        } catch (error) {
+            res.send("hubo un error" + error)
+
+        }
+    },
+    // viejo controlador de levantar vista editarUsuarios
+
+    // editarUsuario:  (req, res) => {
+    //     const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
+    //     let usuarioNuevo2 = parseInt(req.params.idUser);
+    //     let usu = logueo.find((u) => u.Id === usuarioNuevo2);
+    //     if (usu) { res.render("EdicionDeUsuarios", { usu }) }
+
+
+
+    // },
+
+
+
+
+    modificarUsuario: async (req, res) => {
+        let file = req.file;
+        let archivo;
+
+        if (file) {
+            archivo = req.file.filename
+        } else {
+            archivo = "default-image.png"
+        }
+        try {
+            const logueo = await db.users.update({
+                apellido: req.body.apellido,
+
+                nombre: req.body.nombre,
+                telefono: req.body.telefono,
+                email: req.body.email,
+                imagen: archivo,
+                password: bcrypt.hashSync(req.body.password, 15)
+
+            }, {
+                where: {
+                    id_user: req.params.idUser
+                }
+            });
+
+            console.log(
+            { logueo }
+            )
+            res.redirect("/")
+        } catch (error) {
+            res.send("hubo un error" + error)
+        }
+    },
+    
+        // const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
+        // let nuevoUsuario = req.body;
+        // let nuevoArchivo2 = req.file;
+        // let idUsuario = parseInt(req.params.IdUser)
+        // let code = logueo.find((u) => u.Id === idUsuario)
+    
+        // if (code && nuevoUsuario) {
+        //     //code.Id= nuevoUsuario.Id
+        //     code.nombre = nuevoUsuario.nombre
+        //     code.apellido = nuevoUsuario.apellido
+        //     code.telefono = nuevoUsuario.telefono
+        //     code.email = nuevoUsuario.email
+    
+        // }
+        // if (nuevoArchivo2) {
+        //     code.imagen = req.file.filename
+        // console.log(nuevoUsuario);
+        // console.log(nuevoArchivo2);
+        // console.log(idUsuario);
+    
+        // const agregadoUsuario = JSON.stringify(logueo, null, " ");
+        // fs.writeFileSync(loginCangrejo, agregadoUsuario);
+
+
+
+
+
+
+
+
+    borrarUsuario: async (req, res) => {
+        try {
+            const borrar = await db.users.destroy({
+                where:{
+                    id_user: req.params.idUser
+                }
+            })
+            res.redirect("/")
+            
+        } catch (error) {
+            res.send("hubo un error" + error)
+            
         };
-        if(req.file){
-            usuarioN.imagen= req.file.filename;
-
-        }
-        logueo.push(usuarioN)
-        const usuarioNU = JSON.stringify(logueo, null, " ");
-        fs.writeFileSync(loginCangrejo, usuarioNU)
-        res.redirect("/users/login")
-    },
-    editarUsuario: (req, res) => {
-        const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
-        let usuarioNuevo2 = parseInt(req.params.idUser);
-        let usu = logueo.find((u) => u.Id === usuarioNuevo2);
-        if (usu) { res.render("EdicionDeUsuarios", { usu }) }
-
-
-
-    },
-    modificarUsuario: (req, res) => {
-        const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
-        let nuevoUsuario = req.body;
-        let nuevoArchivo2 = req.file;
-        let idUsuario = parseInt(req.params.IdUser)
-        let code = logueo.find((u) => u.Id === idUsuario)
-
-        if (code && nuevoUsuario) {
-            //code.Id= nuevoUsuario.Id
-            code.nombre = nuevoUsuario.nombre
-            code.apellido = nuevoUsuario.apellido
-            code.telefono = nuevoUsuario.telefono
-            code.email = nuevoUsuario.email
-            
-        }
-        if (nuevoArchivo2) {
-            code.imagen = req.file.filename
-            
-            
+        
+                // let logueo = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+                // let idUsuario = parseInt(req.params.idUser)
+                // let nanoto = logueo.filter((u) => u.id !== idUsuario)
+                // nanoto = JSON.stringify(nanoto, null, " ");
+                // fs.writeFileSync(loginCangrejo, nanoto);
+                // res.redirect("/")
+        
+            }
+        
         }
         
-        console.log(nuevoUsuario);
-        console.log(nuevoArchivo2);
-        console.log(idUsuario);
-
-        const agregadoUsuario = JSON.stringify(logueo,null," ");
-        fs.writeFileSync(loginCangrejo,agregadoUsuario);
-        res.redirect("/")
-
-    },
-    borrarUsuario:(req,res)=>{
-        let logueo = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-        let idUsuario = parseInt(req.params.idUser)
-        let nanoto = logueo.filter((u) => u.id !== idUsuario)
-         nanoto = JSON.stringify(nanoto, null, " ");
-        fs.writeFileSync(loginCangrejo, nanoto);
-        res.redirect("/")
-
-    }
-
-}
+        
+        module.exports = usuariosControllers;
 
 
-module.exports = usuariosControllers;
+
+
+
+
+
+
+

@@ -74,6 +74,7 @@ nav .menu{
     padding:0 auto;
     width: 50vw ;
     height: 60vh;
+
     
 }
 
@@ -566,3 +567,15 @@ p.slogans b{
     html{
         min-height: 95vh;
     }
+    div .imagen-usuario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    div .imagen-usuario img{
+        height: 100px;
+      
+          }
+          
+

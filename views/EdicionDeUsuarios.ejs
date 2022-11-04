@@ -8,7 +8,10 @@
                 <div class="Registro">
                     <h1>Editar Usuario</h1>
                     <br>
-                    <form action="/users/Editar/<%= usu.id_user %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="imagen-usuario">
+                        <img  src="/imagenes/<%=usu.imagen%>" alt="imagen de <%= usu.nombre %> ">
+                    </div>
+                    <form action="/users/Editar/<%= usu.id_user%>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
                         <br>
                         <input type="text" placeholder="nombre" name="nombre" value="<%= usu.nombre %> ">
@@ -23,7 +26,7 @@
                         <br>
                         <button type="submit" class="boton"> Modificar </button>
                     </form>
-                    <form action="/productos/borrar/<%= usu.Id %>?_method=DELETE" method="POST" >
+                    <form action="/users/borrar/<%= usu.id_user%>?_method=DELETE" method="POST" >
                         <button type="submit" class="boton"> Eliminar </button>
                     </form>
                    

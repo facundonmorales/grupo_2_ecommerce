@@ -27,7 +27,8 @@ router.get('/modificar', productosController.modificarProducto);
 
 router.get('/detalleProducto/:id', productosController.detalle);
 
-router.get('/crear',authMiddleware, productosController.crearProducto);
+// router.get('/crear',authMiddleware, productosController.crearProducto); // controlador con Middleware
+router.get('/crear', productosController.crearProducto);// controlador con Middleware se uso para el 6 Sprint
 router.post('/crear', upload.single('fotoProducto'),productosController.store);
 
 // router.get('/detalle', productosController.mostrarPorId);

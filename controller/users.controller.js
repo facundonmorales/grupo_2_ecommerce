@@ -15,9 +15,9 @@ const usuariosControllers = {
 
     procesologueo: async (req, res) => {
 
+        const personita = db.users
 
         try {
-            const personita = db.users
             let usuarioAloguearse;
             let contraseña = req.body.password
 
@@ -80,6 +80,9 @@ const usuariosControllers = {
 
     },
     registroDeUsuarios: async (req, res) => {
+
+        image: req.file ? req.file.filename : userImage
+
         let file = req.file;
 
         let archivo;
@@ -97,7 +100,7 @@ const usuariosControllers = {
                 telefono: req.body.telefono,
                 email: req.body.email,
                 imagen: archivo,
-                password: bcrypt.hashSync(req.body.password, 15)
+                password: req.body.password
 
             });
 
@@ -137,23 +140,26 @@ const usuariosControllers = {
 
 
     modificarUsuario: async (req, res) => {
+        let logueo = db.users;
+        
         let file = req.file;
         let archivo;
 
         if (file) {
             archivo = req.file.filename
         } else {
-            archivo = "default-image.png"
+            archivo = logueo.imagen
         }
         try {
-            const logueo = await db.users.update({
+            await logueo.update({
                 apellido: req.body.apellido,
 
                 nombre: req.body.nombre,
                 telefono: req.body.telefono,
                 email: req.body.email,
                 imagen: archivo,
-                password: bcrypt.hashSync(req.body.password, 15)
+                // password: bcrypt.hashSync(req.body.password, 15)
+                password: req.body.password
 
             }, {
                 where: {

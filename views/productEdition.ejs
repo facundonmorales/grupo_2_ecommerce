@@ -8,6 +8,9 @@
                 <div class="Registro">
                     <h1>Editar Productos</h1>
                     <br>
+                    <div class="imagen-usuario">
+                        <img  src="/imagenes/<%=producto.imagen%>" alt="imagen de <%= producto.nombre %>">
+                    </div>
                     <form action="/productos/modificar/<%=producto.id_product%>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
                         <br>

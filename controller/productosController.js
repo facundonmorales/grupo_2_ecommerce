@@ -137,6 +137,8 @@ const productosController = {
     // },
 
     actualizarProducto: async (req, res) => {
+        const productoEditado = db.products
+
         let file = req.file;
 
         let archivo;
@@ -145,10 +147,11 @@ const productosController = {
             archivo = req.file.filename
         } else {
 
-            archivo = "default-image.png"
+            archivo = productoEditado.imagen
         }
         try {
-            const productoEditado = await db.products.update({
+            await productoEditado.update({
+            // const productoEditado = await db.products.update({
                 nombre: req.body.nombre,
                 caracteristicas: req.body.caracteristicas,
                 precio: req.body.precio,
@@ -159,7 +162,7 @@ const productosController = {
             },
             {
                 where :{
-                    id_product : req.params.idUser
+                    id_product : req.params.id
                 }
             }
             );

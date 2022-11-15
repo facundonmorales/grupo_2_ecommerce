@@ -48,6 +48,17 @@ nav .menu{
     transform-origin: 0px 100%;
     transition: all 300ms;
 }
+
+.text-danger{
+    color: red;
+}
+.is-invalid{
+    border: red;
+}
+.espacio{
+    min-height: 700px;
+
+}
 /*
 .bars_menu:active .linea1_bars-menu{
     transform: rotate(45deg);
@@ -65,11 +76,27 @@ nav .menu{
 
 .pass,
 .login,
-.Registro {
+
+
+/* .RegistroUS {
+   
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 5%;
+    margin: 15%;
+    margin-left: 25%;
+    padding:0 auto;
+    width: 50vw ;
+    height: 60vh;
+
+    
+} */
+.Registro {
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:20%;
     margin-left: 25%;
     padding:0 auto;
     width: 50vw ;
@@ -578,4 +605,4 @@ p.slogans b{
       
           }
           
-
+  

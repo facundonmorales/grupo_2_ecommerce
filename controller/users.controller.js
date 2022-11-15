@@ -3,8 +3,9 @@ const path = require('path');
 const bcrypt = require("bcryptjs");
 const req = require('express/lib/request');
 const db = require('../database/models');
-
+const  {validationResult}  = require("express-validator");
 const loginCangrejo = path.join(__dirname, '../Users.json');
+
 
 
 const usuariosControllers = {
@@ -15,6 +16,7 @@ const usuariosControllers = {
 
     procesologueo: async (req, res) => {
 
+        
         const personita = db.users
 
         try {
@@ -81,8 +83,17 @@ const usuariosControllers = {
     },
     registroDeUsuarios: async (req, res) => {
 
-        image: req.file ? req.file.filename : userImage
+        const validador = validationResult(req)
+        
+        if(validador.errors.length > 0){
+            return res.render("register",{
+                errors: validador.mapped(),
+                oldData: req.body
+            })
+        }
+       
 
+       
         let file = req.file;
 
         let archivo;

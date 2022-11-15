@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link class="ico-pestaña"rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Registro</title>
-</head> -->
-<%- include("./partials/head") %>
-<body>
-    <!-- <header>
-        <div class="container">
-            <nav>
-                <a class="menu" href="">
-                    <div class="bars_menu">
-                        <span class="linea1_bars-menu"></span>
-                        <span class="linea2_bars-menu"></span>
-                        <span class="linea3_bars-menu"></span>
-                    </div>
-                </a>
-                <a class="logo" href="/">
-                    <img src="/img/logo.png" alt="logo">
-                </a>
-                <div class="boton_carrito">
-                    <a href=""><i class="fas fa-shopping-bag"></i></a>
-                </div>
-            </nav>
-        </div>
-    </header> -->
-    <%- include("./partials/headerHome")  %> 
-  <main>
-        <div class="Registro">
-            <h1>Registrate</h1>
-            <br>
-            <form action="/users/register" method="post" enctype="multipart/form-data"> 
-            <input  name="nombre" type="text" placeholder="Nombre">
-            <br>
-            <input name="apellido" type="text" placeholder="Apellido">
-            <br>
-            <input name="telefono" type="tel" placeholder="Telefono">
-            <br>
-            <input name="email" type="email" placeholder="Email">
-            <br>
-            <input type="file" class="boton" name="imagen"> 
-            <br>
-            <input name="password" type="password" placeholder="Contraseña">
-            <br>
-            <a href="./login"><span>¿Ya eres miembro?  </span>Inicia tu sesión</a>
-            <br>
-            <button type="submit" class="boton"> Registrarse</button>
-        </form>
-        </div>
 
-  </main>  
-  <!-- <footer>
-    <div class="container_footer">
-        <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
-        <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
-        <a href="#"><i class="fas fa-truck"></i>Envios</a>
-        <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
-    </div>
-</footer> -->
-<%- include("./partials/footer") %> 
-</body>
+<%- include("./partials/head") %>
+
+    <body>
+
+        <%- include("./partials/headerHome") %>
+            <main class="espacio">
+                <div class="Registro">
+                    <h1>Registrate</h1>
+                    <br>
+                    <form action="/users/register" method="post" enctype="multipart/form-data">
+                        <br>
+                        <label for="nombre">ingrese su nombre</label>
+                        <input name="nombre" type="text" placeholder="Nombre"
+                            value="<%=locals.oldData? oldData.nombre: null %>">
+                        <% if(locals.errors && errors.nombre){ %>
+                            <div class="text-danger">
+                                <%= errors.nombre.msg %>
+                            </div>
+                            <% } %>
+                                <br>
+                                <label for="apellido">ingrese su apellido</label>
+                                <input name="apellido" type="text" placeholder="Apellido"
+                                    value="<%=locals.oldData? oldData.apellido: null %>">
+                                <% if(locals.errors && errors.apellido){ %>
+                                    <div class="text-danger">
+                                        <%= errors.apellido.msg %>
+                                    </div>
+                                    <% } %>
+                                        <br>
+                                        <label for="telefono">ingrese su telefono</label>
+                                        <input name="telefono" type="tel" placeholder="Telefono"
+                                            value="<%=locals.oldData? oldData.telefono: null %>">
+                                        <% if(locals.errors && errors.telefono){ %>
+                                            <div class="text-danger">
+                                                <%= errors.telefono.msg %>
+                                            </div>
+                                            <% } %>
+                                                <br>
+                                                <label for="email">ingrese su Email</label>
+                                                <input name="email" type="email" placeholder="Email"
+                                                    value="<%=locals.oldData? oldData.email: null %>">
+                                                <% if(locals.errors && errors.email){ %>
+                                                    <div class="text-danger">
+                                                        <%= errors.email.msg %>
+                                                    </div>
+                                                    <% } %>
+                                                        <br>
+                                                        <label for="nombre">ingrese una imagen </label>
+                                                        <input type="file" class="boton  " name="imagen">
+                                                        <% if(locals.errors && errors.imagen){ %>
+                                                            <div class="text-danger">
+                                                                <%= errors.imagen.msg %>
+                                                            </div>
+                                                            <% } %>
+                                                                <br>
+                                                                <label for="password">ingrese su Contraseña</label>
+                                                                <input name="password" type="password"
+                                                                 placeholder="Contraseña">
+                                                                 <% if(locals.errors && errors.password){ %>
+                                                                    <div class="text-danger">
+                                                                        <%= errors.password.msg %>
+                                                                    </div>
+                                                                    <% } %>
+                                                                <br>
+                                                                <a href="./login"><span>¿Ya eres miembro? </span>Inicia
+                                                                    tu sesión</a>
+                                                                <br>
+                                                                <button type="submit" class="boton">
+                                                                    Registrarse</button>
+
+                    </form>
+                </div>
+
+            </main>
+           <script src="/scripts/formRegistro.js"></script>
+            <%- include("./partials/footer") %>
+    </body>
+
 </html>

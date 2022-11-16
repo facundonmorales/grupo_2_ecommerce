@@ -42,8 +42,18 @@
                     <form action="/users/login" method="post">
 
                         <input name="email" type="email" placeholder="email">
+                        <% if(locals.errors && errors.email){ %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
                         <br>
                         <input name="password" type="password" placeholder="Contraseña">
+                        <% if(locals.errors && password.nombre){ %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
                         <br>
                         <a href="./pass">¿Olvidaste tu contraseña?</a>
                         <br>

@@ -16,6 +16,16 @@ const usuariosControllers = {
 
     procesologueo: async (req, res) => {
 
+        const validador = validationResult(req)
+        
+        if(validador.errors.length > 0){
+            return res.render("login",{
+                errors: validador.mapped(),
+                oldData: req.body
+            })
+        }
+        
+
         
         const personita = db.users
 

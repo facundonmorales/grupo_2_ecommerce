@@ -48,7 +48,7 @@ const validacionesUsuarioC = [
             })
                 .then(user => {
                     if (user) {
-                        return Promise.reject('este correo ya existe');
+                        throw new Error   ('este correo ya existe');
                         ;
                     }
                 })
@@ -93,6 +93,15 @@ const validacionesUsuarioC = [
     })
 ]
 
+const validacionesLogin =[
+
+    body("email").notEmpty().withMessage("debes completar el campo email").bail()
+    .isEmail().withMessage("debe ser un email valido").bail(),
+
+    body("password").notEmpty().withMessage("debes completar el campo contraseña").bail()
+        .isLength({ min: 8, }).withMessage("el nombre debe tener mas de 8 caracteres"),
+
+]
 
 
 

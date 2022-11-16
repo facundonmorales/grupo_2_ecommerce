@@ -3,6 +3,8 @@ const path = require('path');
 
 const db = require('../database/models')
 
+const { validationResult } = require('express-validator');
+
 
 // const direccionProductos = path.join(__dirname, '../listadoProductos.json')
 
@@ -53,6 +55,16 @@ const productosController = {
     },
 
     store:async (req, res) => {
+
+        let resultValidation = validationResult(req)
+
+        if ( resultValidation.errors.length > 0){
+            res.render('productCreate',{
+                errors:resultValidation.mapped(),
+                oldData : req.body
+            })
+        }
+        console.log(resultValidation);
         let file = req.file;
 
         let archivo;
@@ -78,7 +90,7 @@ const productosController = {
             console.log({ productoNuevo });
             res.redirect('/productos/detalleProducto/' + productoNuevo.id_product)
         } catch (error) {
-            res.send({ error })
+            console.log({ error })
         }
 
     },

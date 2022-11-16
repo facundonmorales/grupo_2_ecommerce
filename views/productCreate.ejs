@@ -39,19 +39,48 @@
             <h1>Crear Productos</h1>
             <br>
             <form action="/productos/crear" method="POST" enctype="multipart/form-data">
-            <input type="text" placeholder="nombre" name="nombre">
+            <label for="nombre">Ingresa el nombre del producto</label>
+            <input type="text" placeholder="nombre" name="nombre" id="nombre"
+            value="<%= locals.oldData ? oldData.nombre : null %>">
+            
+            <% if(locals.errors && errors.nombre){ %> 
+                <div class="text-danger">
+                    <%= errors.nombre.msg  %> 
+                </div>
+                <% } %>
+                <br>
+            <label for="precio">Ingresa el precio del Producto</label>
+            <input type="text" placeholder="precio" name="precio" id="precio"
+            value="<%= locals.oldData ? oldData.precio : null %>">
+            <% if(locals.errors && errors.precio){ %> 
+                <div class="text-danger">
+                    <%= errors.precio.msg  %> 
+                </div>
+                <% } %>
+                <br>
+                <input type="file" name="fotoProducto" id="fotoProducto">
+                <% if(locals.errors && errors.fotoProducto){ %> 
+                    <div class="text-danger">
+                        <%= errors.fotoProducto.msg  %> 
+                    </div>
+                    <% } %>
+                <br>
+                <label for="caracteristicas">Ingresa las caracteristicas del Producto</label>
+                <input type="text" placeholder="caracteristicas" name="caracteristicas" id="caracteristicas"
+                value="<%= locals.oldData ? oldData.caracteristicas : null %>">
+            
+            <% if(locals.errors && errors.caracteristicas){ %> 
+                <div class="text-danger">
+                    <%= errors.caracteristicas.msg  %> 
+                </div>
+                <% } %>
             <br>
-            <input type="text" placeholder="precio" name="precio">
-            <br>
-                <input type="file" name="fotoProducto">
-            <br>
-            <input type="text" placeholder="caracteristicas" name="caracteristicas">
             <br>
             <button type="submit" class="boton"> Crear</button>
         </form>
         </div>
 
-  </main>
+  </main>  
   <!-- <footer>
     <div class="container_footer">
         <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
@@ -60,6 +89,7 @@
         <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
     </div>
 </footer> -->
+<script src="/scripts/formCreacion.js"></script>
 <%- include("./partials/footer") %> 
 </body>
 </html>

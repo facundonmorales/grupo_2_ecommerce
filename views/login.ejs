@@ -1,80 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link class="ico-pestaña"rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    
-    <title>Login</title>
-</head> -->
+
 <%- include("./partials/head") %>
 
     <body>
-        <!-- <header>
-        <div class="container">
-            <nav>
-                <a class="menu" href="">
-                    <div class="bars_menu">
-                        <span class="linea1_bars-menu"></span>
-                        <span class="linea2_bars-menu"></span>
-                        <span class="linea3_bars-menu"></span>
-                    </div>
-                </a>
-                <a class="logo" href="/">
-                    <img src="/img/logo.png" alt="logo">
-                </a>
-                <div class="boton_carrito">
-                    <a href=""><i class="fas fa-shopping-bag"></i></a>
-                </div>
-            </nav>
-        </div>
-    </header> -->
+
         <%- include("./partials/headerHome") %>
             <main>
                 <div class="login">
                     <h1>Iniciar sesión</h1>
+                    <div id="errores"></div>
                     <form action="/users/login" method="post">
 
-                        <input name="email" type="email" placeholder="email">
+                        <input name="email" type="text" placeholder="email" id="email">
                         <% if(locals.errors && errors.email){ %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
                             </div>
                             <% } %>
-                        <br>
-                        <input name="password" type="password" placeholder="Contraseña">
-                        <% if(locals.errors && errors.password){ %>
-                            <div class="text-danger">
-                                <%= errors.password.msg %>
-                            </div>
-                            <% } %>
-                        <br>
-                        <a href="./pass">¿Olvidaste tu contraseña?</a>
-                        <br>
-                        <label for="">recordarme</label>
-                        <input type="checkbox"  name="recordarme" value="true">
-                        
-                        <button type="submit" class="boton" value="Login"> Log in</button>
-                        <br>
-                        <a href="./register">Crear cuenta</a>
+                                <br>
+                                <input name="password" type="password" placeholder="Contraseña" id="password">
+                                <% if(locals.errors && errors.password){ %>
+                                    <div class="text-danger">
+                                        <%= errors.password.msg %>
+                                    </div>
+                                    <% } %>
+                                        <br>
+                                        <a href="./pass">¿Olvidaste tu contraseña?</a>
+                                        <br>
+                                        <label for="">recordarme</label>
+                                        <input type="checkbox" name="recordarme" value="true">
+
+                                        <button type="submit" class="boton" value="Login"> Log in</button>
+                                        <br>
+                                        <a href="./register">Crear cuenta</a>
                     </form>
                 </div>
 
             </main>
-            <!-- <footer>
-    <div class="container_footer">
-        <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
-        <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
-        <a href="#"><i class="fas fa-truck"></i>Envios</a>
-        <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
-    </div>
-</footer> -->
+            <script src="/scripts/formlogin.js"></script>
             <%- include("./partials/footer") %>
     </body>
 

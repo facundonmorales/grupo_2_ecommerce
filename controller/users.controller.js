@@ -25,24 +25,19 @@ const usuariosControllers = {
             })
         }
         
-
-        
-        const personita = db.users
-
         try {
             let usuarioAloguearse;
             let contraseña = req.body.password
 
-            console.log(contraseña)
 
-            await personita.findOne(
+            let personita = await db.users.findOne(
                 {
                     where: {
                         email: req.body.email
                     }
                 })
-            console.log(personita)
-
+                console.log(bcrypt.hashSync(contraseña, 10))
+                console.log(personita.password)
             if (bcrypt.compareSync(contraseña, personita.password)) {
                 usuarioAloguearse = personita;
 
@@ -56,6 +51,7 @@ const usuariosControllers = {
                     ]
                 })
             }
+            
 
             if (req.body.recordarme == "true") {
                 res.cookie("recordarme", usuarioAloguearse.email, { maxAge: 100000, httpOnly: true })
@@ -121,10 +117,10 @@ const usuariosControllers = {
                 telefono: req.body.telefono,
                 email: req.body.email,
                 imagen: archivo,
-                password: req.body.password
-
+                password: bcrypt.hashSync(req.body.password, 10)
             });
-
+            console.log(bcrypt.hashSync(req.body.password, 10))
+            console.log(usuarioN.password)
             res.redirect("/users/login")
         } catch (error) {
             res.send({ error })

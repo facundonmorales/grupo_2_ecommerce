@@ -49,7 +49,7 @@
                             <% } %>
                         <br>
                         <input name="password" type="password" placeholder="Contraseña">
-                        <% if(locals.errors && password.nombre){ %>
+                        <% if(locals.errors && errors.password){ %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>
                             </div>

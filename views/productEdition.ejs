@@ -14,13 +14,13 @@
                     <form action="/productos/modificar/<%=producto.id_product%>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
                         <br>
-                        <input type="text" placeholder="nombre" name="nombre" value="<%= producto.nombre %> ">
+                        <input id="nombre" type="text" placeholder="nombre" name="nombre" value="<%= producto.nombre %> ">
                         <br>
-                        <input type="text" placeholder="precio" name="precio" value="<%= producto.precio %> ">
+                        <input id="precio" type="text" placeholder="precio" name="precio" value="<%= producto.precio %> ">
                         <br>
-                        <input type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
+                        <input id="fotoProducto" type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
                         <br>
-                        <input type="text" placeholder="caracteristicas" name="caracteristicas" value="<%= producto.caracteristicas %> ">
+                        <input id="caracteristicas" type="text" placeholder="caracteristicas" name="caracteristicas" value="<%= producto.caracteristicas %> ">
                         <br>
                         <button type="submit" class="boton"> Modificar </button>
                     </form>
@@ -31,6 +31,7 @@
                 </div>
 
             </main> 
+            <script src="../scripts/formmodificar.js"></script>
             <%- include("./partials/footer") %>
     </body>
 

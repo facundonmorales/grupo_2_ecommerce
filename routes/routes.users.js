@@ -48,7 +48,7 @@ const validacionesUsuarioC = [
             })
                 .then(user => {
                     if (user) {
-                        throw new Error   ('este correo ya existe');
+                        throw new Error('este correo ya existe');
                         ;
                     }
                 })
@@ -93,13 +93,13 @@ const validacionesUsuarioC = [
     })
 ]
 
-const validacionesLogin =[
+const validacionesLogin = [
 
     body("email").notEmpty().withMessage("debes completar el campo email").bail()
-    .isEmail().withMessage("debe ser un email valido").bail(),
+        .isEmail().withMessage("debe ser un email valido").bail(),
 
     body("password").notEmpty().withMessage("debes completar el campo contraseña").bail()
-        .isLength({ min: 8, }).withMessage("el nombre debe tener mas de 8 caracteres"),
+        .isLength({ min: 8, }).withMessage("la contraseña debe tener mas de 8 caracteres"),
 
 ]
 
@@ -107,14 +107,14 @@ const validacionesLogin =[
 
 
 
-router.get('/login', guestMiddleware, usuariosControllers.login),
-    router.post('/login', usuariosControllers.procesologueo),
+    router.get('/login', guestMiddleware, usuariosControllers.login),
+    router.post('/login', validacionesLogin, usuariosControllers.procesologueo),
     router.get('/pass', usuariosControllers.pass),
-    // router.get('/register',guestMiddleware, usuariosControllers.register), // Controlador con Middleware
-    router.get('/register', usuariosControllers.register),
+    router.get('/register', guestMiddleware, usuariosControllers.register), 
     router.post("/register", upload.single("imagen"), validacionesUsuarioC, usuariosControllers.registroDeUsuarios),
-    // router.get("/editar/:idUser",authMiddleware, usuariosControllers.editarUsuario),// controlador con Middleware
-    router.get("/editar/:idUser", usuariosControllers.editarUsuario),// controlador sin middleware se uso para el Sprint 6
+    router.get("/editar/:idUser", authMiddleware, usuariosControllers.editarUsuario),
     router.put("/editar/:idUser", usuariosControllers.modificarUsuario),
-    router.delete("/borrar/:idUser", usuariosControllers.borrarUsuario)
+    router.delete("/borrar/:idUser", usuariosControllers.borrarUsuario),
+
+
 module.exports = router;

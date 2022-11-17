@@ -608,5 +608,16 @@ p.slogans b{
         height: 100px;
       
           }
-          
+
+    div .imagen-producto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    div .imagen-producto img{
+        height: 200px;
+      border-radius: 15px;
+          }
+    
   

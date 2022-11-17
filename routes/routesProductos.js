@@ -66,7 +66,7 @@ router.post('/crear', [upload.single('fotoProducto'),validacionesCreadorProducto
 
 
 router.get('/modificar/:idUser', productosController.modificarProducto);
-router.put('/modificar/:idUser', upload.single("imagen"), productosController.actualizarProducto);
+router.put('/modificar/:idUser', [upload.single('fotoProducto'),validacionesCreadorProductos], productosController.actualizarProducto);
 router.delete("/borrar/:idUser", productosController.borrarProducto)
 
 module.exports = router;

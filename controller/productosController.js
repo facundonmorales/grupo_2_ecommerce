@@ -132,12 +132,30 @@ const productosController = {
     modificarProducto: async (req, res) => {
         try {
             const producto = await db.products.findByPk(req.params.idUser);
-            console.log(producto);
-            res.render('productEdition', { producto: producto });
-        } catch (error) {
-            console.log(error)
-        }
-    },
+            
+            
+                console.log(producto);
+                console.log('////////////////////////////////////');
+                console.log(req.params.id);
+                console.log('////////////////////////////////////');
+                const otroProducto = { nombre: producto.dataValues.nombre,
+                    
+                    id_product: producto.dataValues.id_product,
+                    precio: producto.dataValues.precio,
+                    caracteristicas: producto.dataValues.caracteristicas,
+                    imagen:producto.dataValues.imagen
+                }
+                res.render('productEdition', { producto: otroProducto });
+                
+                
+                
+                
+            } catch (error) {
+                console.log(error)
+            }
+            // res.render('productosdetalle');
+        },
+        
     
 /// CONTROLARDOR VIEJO CON JSON
 
@@ -151,19 +169,36 @@ const productosController = {
     actualizarProducto: async (req, res) => {
         const productoEditado = db.products
 
+               let resultValidation = validationResult(req)
+               console.log(req.params.idUser);
+               
+               if ( resultValidation.errors.length > 0){
+                console.log(req.body);
+                   res.render('productEdition',{producto:{id_product:req.params.idUser},
+                       errors:resultValidation.mapped(),
+                       oldData : req.body
+                   })
+               }
+                console.log(resultValidation);
+               
+        
+        
+        
         let file = req.file;
-
+        
         let archivo;
-
+        
         if (file) {
             archivo = req.file.filename
         } else {
-
+            
             archivo = productoEditado.imagen
         }
         try {
+
+
             await productoEditado.update({
-            // const productoEditado = await db.products.update({
+                // const productoEditado = await db.products.update({
                 nombre: req.body.nombre,
                 caracteristicas: req.body.caracteristicas,
                 precio: req.body.precio,
@@ -174,15 +209,14 @@ const productosController = {
             },
             {
                 where :{
-                    id_product : req.params.id
+                    id_product : req.params.idUser
                 }
             }
             );
-
              console.log({ productoEditado });
-            res.redirect('/')
+            res.redirect('/productos/detalleProducto/' + productoEditado.id_product)
         } catch (error) {
-            res.send({ error })
+            console.log({ error })
         }
 
     },

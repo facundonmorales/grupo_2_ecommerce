@@ -6,24 +6,47 @@
         <%- include("./partials/headerHome") %>
             <main>
                 <div class="Registro">
+                    <div id="errores"></div>
                     <h1>Editar Productos</h1>
                     <br>
-                    <div class="imagen-usuario">
-                        <img  src="/imagenes/<%=producto.imagen%>" alt="imagen de <%= producto.nombre %>">
+                    <div class="imagen-producto">
+                        <img  src="/imagenes/<%= locals.oldData ? oldData.imagen : producto.imagen %>" alt="imagen de <%= producto.nombre %> ">
                     </div>
                     <form action="/productos/modificar/<%=producto.id_product%>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
-                        <br>
-                        <input type="text" placeholder="nombre" name="nombre" value="<%= producto.nombre %> ">
-                        <br>
-                        <input type="text" placeholder="precio" name="precio" value="<%= producto.precio %> ">
-                        <br>
-                        <input type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
-                        <br>
-                        <input type="text" placeholder="caracteristicas" name="caracteristicas" value="<%= producto.caracteristicas %> ">
-                        <br>
-                        <button type="submit" class="boton"> Modificar </button>
-                    </form>
+                        <label for="nombre">Nombre del Producto</label>   
+             <input type="text" placeholder  ="nombre" name="nombre" id="nombre" value="<%= locals.oldData ? oldData.nombre : producto.nombre %>">
+             <% if(locals.errors && errors.nombre){ %> 
+                <div class="text-danger">
+                    <%= errors.nombre.msg  %> 
+                </div>
+                <% } %>
+             <br>
+             <label for="precio">Precio del Producto</label>   
+             <input type="text" placeholder="precio" name="precio" id="precio" value="<%= locals.oldData ? oldData.precio : producto.precio %>">
+             <% if(locals.errors && errors.precio){ %> 
+                <div class="text-danger">
+                    <%= errors.precio.msg  %> 
+                </div>
+                <% } %>
+             <br>
+             <input type="file" name="fotoProducto" id="fotoProducto" >
+             <% if(locals.errors && errors.fotoProducto){ %> 
+                <div class="text-danger">
+                    <%= errors.fotoProducto.msg  %> 
+                </div>
+                <% } %>
+             <br>
+             <label for="caracteristicas">caracteristicas del Producto</label>   
+            <input type="text" placeholder="caracteristicas" name="caracteristicas" id="caracteristicas" value="<%= locals.oldData ? oldData.caracteristicas : producto.caracteristicas %>">
+            <% if(locals.errors && errors.caracteristicas){ %> 
+                <div class="text-danger">
+                    <%= errors.caracteristicas.msg  %> 
+                </div>
+                <% } %>
+            <br>
+            <button type="submit" class="boton"> Modificar</button>
+    </form>
                     <form action="/productos/borrar/<%= producto.id_product%>?_method=DELETE" method="POST" >
                         <button type="submit" class="boton"> Eliminar </button>
                     </form>
@@ -31,6 +54,7 @@
                 </div>
 
             </main> 
+            <script src="/scripts/formEdicion.js"></script>
             <%- include("./partials/footer") %>
     </body>
 

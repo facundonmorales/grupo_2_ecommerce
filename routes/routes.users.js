@@ -7,6 +7,7 @@ const multer = require('multer');
 const authMiddleware = require('../middlewares/authMiddleware');
 const path = require("path");
 const db = require('../database/models');
+const req = require('express/lib/request');
 
 var storage = multer.diskStorage({
     destination: (req, res, cb) => {
@@ -36,10 +37,10 @@ const validacionesUsuarioC = [
 
     body("email").notEmpty().withMessage("debes completar el campo email").bail()
         .isEmail().withMessage("debe ser un email valido").bail()
-        .custom((value) => {
-            console.log(value)
+        .custom(async(value) => {
+            console.log( value)
 
-            db.users.findOne({
+         const user = await  db.users.findOne({
                 where: {
 
                     email: value

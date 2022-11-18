@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
         if (campoCaracteristicas.value.trim() == "") {
             errores.push("el campo de caracteristicas tiene que estar completo")
         } else if (campoCaracteristicas.value.length < 10) {
-            errores.push("el nombre debe tener mas de 10 caracteres")
+            errores.push("Las caracteristicas debe tener mas de 10 caracteres")
         };
 
          if(campoFotoProducto.value==""){

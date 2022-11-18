@@ -214,7 +214,7 @@ const productosController = {
             }
             );
              console.log({ productoEditado });
-            res.redirect('/productos/detalleProducto/' + productoEditado.id_product)
+            res.redirect('/')
         } catch (error) {
             console.log({ error })
         }

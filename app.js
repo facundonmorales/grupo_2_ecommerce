@@ -60,6 +60,9 @@ app.use('/', homeRouter);
 
 const rutaProductos= require("./routes/routesProductos");
 
+const apiRutaProducto = require ('./routes/api/routesProductos')
+app.use('/api/v1/',apiRutaProducto)
+
 
 app.use('/productos', rutaProductos);
 

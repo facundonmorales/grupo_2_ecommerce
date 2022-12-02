@@ -47,21 +47,24 @@ const sequelize =require("sequelize")
 // });
 const urlparser = bodyParser.urlencoded({extended:false})
 const rutaCarrito= require("./routes/routes.carrito")
-
 app.use('/carrito', rutaCarrito);
 
-const usersRouter = require('./routes/routes.users') 
 
-app.use('/users',urlparser,usersRouter)
+const usersRouter = require('./routes/routes.users') 
+app.use('/users',urlparser,usersRouter);
+
 
 const homeRouter = require('./routes/routes.home')
-
 app.use('/', homeRouter);
 
+
 const rutaProductos= require("./routes/routesProductos");
-
-
 app.use('/productos', rutaProductos);
+
+const apis= require("./routes/apis/apiUsuarios");
+app.use("/apis", apis);
+
+
 
 new sequelize('krabby_db', 'root', '', {
     host: 'localhost',

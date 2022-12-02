@@ -1,8 +1,8 @@
 const express = require('express');
 const { body } = require("express-validator");
-const usuariosControllers = require('../controller/users.controller')
-const router = express.Router()
-let guestMiddleware = require("../middlewares/guestMiddleware")
+const usuariosControllers = require('../controller/users.controller');
+const router = express.Router();
+let guestMiddleware = require("../middlewares/guestMiddleware");
 const multer = require('multer');
 const authMiddleware = require('../middlewares/authMiddleware');
 const path = require("path");

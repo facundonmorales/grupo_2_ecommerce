@@ -4,7 +4,7 @@ const ApiUsers = require("../../controller/api/UserControllers");
 const router = express.Router();
 
 router.get('/users/', ApiUsers.users);
-router.get('/user/:id', ApiUsers.detalleUsers);
+router.get('/users/:id', ApiUsers.detalleUsers);
 
 
 

@@ -75,7 +75,7 @@ const productosController = {
             let respuesta = {
                 meta: {
                     status:404,
-                    url:'api/v1/producto/:id'
+                    
                 }
             }
             res.json(respuesta)

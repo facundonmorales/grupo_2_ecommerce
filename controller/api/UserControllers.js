@@ -37,12 +37,13 @@ const UserControllers = {
         }
     },
     detalleUsers: async (req, res) => {
-        console.log(req.params.id)
+
         try {
-            
+
             const usuario = await db.users.findByPk(req.params.id
-                
+
             );
+
             let respuesta = {
                 meta: {
                     status: 200,
@@ -64,8 +65,9 @@ const UserControllers = {
             res.json(respuesta)
 
         }
+        
     }
 
 }
 
-module.exports= UserControllers;
+module.exports = UserControllers;

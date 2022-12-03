@@ -61,8 +61,14 @@ app.use('/', homeRouter);
 const rutaProductos= require("./routes/routesProductos");
 app.use('/productos', rutaProductos);
 
-const apis= require("./routes/apis/apiUsuarios");
-app.use("/apis", apis);
+const apiRutaProducto = require ('./routes/api/routesProductos')
+app.use('/api/v1/',apiRutaProducto);
+
+const apiRutaUsuario = require ("./routes/api/routesUsuarios")
+app.use("/api/usuarios",apiRutaUsuario);
+
+
+
 
 
 

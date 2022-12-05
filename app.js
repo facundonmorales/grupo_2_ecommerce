@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const app = express();
 const cookieParser= require("cookie-parser")
-
+const userLogged = require('./middlewares/userLogged')
 
 
 
@@ -17,6 +17,9 @@ app.use(methodOverride("_method"));
 let session = require("express-session")
 
 app.use(session({secret: "esto es un secreto"}))
+
+
+app.use(userLogged)
 
 const sequelize =require("sequelize")
 
@@ -64,7 +67,8 @@ app.use('/productos', rutaProductos);
 const apiRutaProducto = require ('./routes/api/routesProductos')
 app.use('/api/v1/',apiRutaProducto);
 
-const apiRutaUsuario = require ("./routes/api/routesUsuarios")
+const apiRutaUsuario = require ("./routes/api/routesUsuarios");
+const req = require('express/lib/request');
 app.use("/api/usuarios",apiRutaUsuario);
 
 

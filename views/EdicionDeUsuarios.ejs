@@ -11,18 +11,23 @@
                     <div class="imagen-usuario">
                         <img  src="/imagenes/<%=usu.imagen%>" alt="imagen de <%= usu.nombre %> ">
                     </div>
-                    <form action="/users/Editar/<%= usu.id_user%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form action="/users/editar/<%=usu.id_user%>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
                         <br>
-                        <input type="text" placeholder="nombre" name="nombre" value="<%= usu.nombre %> ">
+                        <label for="nombreUsuario">Nombre de Usuario</label>
+                        <input type="text" placeholder="nombre" name="nombre" value="<%= usu.nombre %> " id="nombreUsuario">
                         <br>
-                        <input type="text" placeholder="apellido" name="apellido" value="<%= usu.apellido %> ">
+                        <label for="apellidoUsuario">Apellido de Usuario</label>
+                        <input type="text" placeholder="apellido" name="apellido" value="<%= usu.apellido %> " id="apellidoUsuario">
                         <br>
-                        <input type="text" placeholder="telefono" name="telefono" value="<%= usu.telefono %> ">
+                        <label for="telefonoUsuario">Telefono de Usuario</label>
+                        <input type="text" placeholder="telefono" name="telefono" value="<%= usu.telefono %> " id="telefonoUsuario">
                         <br>
-                        <input type="text" placeholder="email" name="email" value="<%= usu.email %> ">
+                        <label for="emailUsuario">Email de Usuario</label>
+                        <input type="text" placeholder="email" name="email" value="<%= usu.email %> " id="emailUsuario">
                         <br>
-                        <input type="file" class="boton" name="imagen"> Seleccionar Imagen</button>
+                        <label for="imagenUsuario">Imagen de Usuario</label>
+                        <input type="file" class="boton" name="imagen" id="imagenUsuario"> Seleccionar Imagen</button>
                         <br>
                         <button type="submit" class="boton"> Modificar </button>
                     </form>

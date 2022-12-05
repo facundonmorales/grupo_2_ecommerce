@@ -3,6 +3,35 @@
         <li class='logo'><a href='/'><img src='/img/logo.png'/></a></li>
         <input type='checkbox' id='check' />
         <span class="menu">
+            <% if (locals.isLogged) {%>
+                <li>
+                    <a href="/users/editar/<%= locals.usuarioLogueado.id_user%> ">
+                        <!-- <i class="fas fa-heart"></i> -->
+                        <img src="/imagenes/<%= locals.usuarioLogueado.imagen%> " width="25" style="border-radius: 100%" alt="">
+                        <span>
+                            Hola <%= locals.usuarioLogueado.nombre%>
+                        </span>
+                    </a>
+                </li>
+<li>
+        <a href="/users/logout/" class="fas fa-user-circle">Cerrar Sesion</a>
+
+</li>
+                <li>
+                    <a href="/productos/crear" >
+                        <i class="fas fa-user-circle"></i>
+                        Vender
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                        Contactanos
+                    </a>
+                </li>
+                
+                <% } else { %>
             <li>
                 <a href="/users/login" >
                     <i class="fas fa-user-circle"></i>
@@ -15,42 +44,7 @@
                     Registrarse
                 </a>
             </li>
-            <li>
-                <a href="/carrito/productCart">
-                    <i class="fas fa-shopping-bag"></i>
-                    Carrito
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-heart"></i>
-                    Favoritos
-                </a>
-            </li>
-            <li>
-                <a href="/productos/crear" >
-                    <i class="fas fa-user-circle"></i>
-                    Vender
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-history"></i>
-                    Historial
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-tag"></i>
-                    Ofertas
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-envelope"></i>
-                    Contactanos
-                </a>
-            </li>
+            <% } %>
             <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
         </span>
         <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>

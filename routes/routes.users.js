@@ -116,6 +116,9 @@ const validacionesLogin = [
     router.get("/editar/:idUser", authMiddleware, usuariosControllers.editarUsuario),
     router.put("/editar/:idUser", usuariosControllers.modificarUsuario),
     router.delete("/borrar/:idUser", usuariosControllers.borrarUsuario),
+    
+    
+    router.get("/logout/", usuariosControllers.logout),
 
 
 module.exports = router;

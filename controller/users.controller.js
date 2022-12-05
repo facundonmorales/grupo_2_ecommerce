@@ -3,7 +3,7 @@ const path = require('path');
 const bcrypt = require("bcryptjs");
 const req = require('express/lib/request');
 const db = require('../database/models');
-const  {validationResult}  = require("express-validator");
+const { validationResult } = require("express-validator");
 const loginCangrejo = path.join(__dirname, '../Users.json');
 
 
@@ -17,14 +17,14 @@ const usuariosControllers = {
     procesologueo: async (req, res) => {
 
         const validador = validationResult(req)
-        
-        if(validador.errors.length > 0){
-            return res.render("login",{
+
+        if (validador.errors.length > 0) {
+            return res.render("login", {
                 errors: validador.mapped(),
                 oldData: req.body
             })
         }
-        
+
         try {
             let usuarioAloguearse;
             let contraseña = req.body.password
@@ -36,8 +36,8 @@ const usuariosControllers = {
                         email: req.body.email
                     }
                 })
-                console.log(bcrypt.hashSync(contraseña, 10))
-                console.log(personita.password)
+            console.log(bcrypt.hashSync(contraseña, 10))
+            console.log(personita.password)
             if (bcrypt.compareSync(contraseña, personita.password)) {
                 usuarioAloguearse = personita;
 
@@ -51,7 +51,7 @@ const usuariosControllers = {
                     ]
                 })
             }
-            
+
 
             if (req.body.recordarme == "true") {
                 res.cookie("recordarme", usuarioAloguearse.email, { maxAge: 100000, httpOnly: true })
@@ -90,16 +90,16 @@ const usuariosControllers = {
     registroDeUsuarios: async (req, res) => {
 
         const validador = validationResult(req)
-        
-        if(validador.errors.length > 0){
-            return res.render("register",{
+
+        if (validador.errors.length > 0) {
+            return res.render("register", {
                 errors: validador.mapped(),
                 oldData: req.body
             })
         }
-       
 
-       
+
+
         let file = req.file;
 
         let archivo;
@@ -158,7 +158,7 @@ const usuariosControllers = {
 
     modificarUsuario: async (req, res) => {
         let logueo = db.users;
-        
+
         let file = req.file;
         let archivo;
 
@@ -170,13 +170,12 @@ const usuariosControllers = {
         try {
             await logueo.update({
                 apellido: req.body.apellido,
-
                 nombre: req.body.nombre,
                 telefono: req.body.telefono,
                 email: req.body.email,
                 imagen: archivo,
                 // password: bcrypt.hashSync(req.body.password, 15)
-                password: req.body.password
+                // password: req.body.password
 
             }, {
                 where: {
@@ -185,71 +184,74 @@ const usuariosControllers = {
             });
 
             console.log(
-            { logueo }
+                { logueo }
+            )
+            console.log(
+                req.body
             )
             res.redirect("/")
         } catch (error) {
             res.send("hubo un error" + error)
         }
     },
-    
-        // const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
-        // let nuevoUsuario = req.body;
-        // let nuevoArchivo2 = req.file;
-        // let idUsuario = parseInt(req.params.IdUser)
-        // let code = logueo.find((u) => u.Id === idUsuario)
-    
-        // if (code && nuevoUsuario) {
-        //     //code.Id= nuevoUsuario.Id
-        //     code.nombre = nuevoUsuario.nombre
-        //     code.apellido = nuevoUsuario.apellido
-        //     code.telefono = nuevoUsuario.telefono
-        //     code.email = nuevoUsuario.email
-    
-        // }
-        // if (nuevoArchivo2) {
-        //     code.imagen = req.file.filename
-        // console.log(nuevoUsuario);
-        // console.log(nuevoArchivo2);
-        // console.log(idUsuario);
-    
-        // const agregadoUsuario = JSON.stringify(logueo, null, " ");
-        // fs.writeFileSync(loginCangrejo, agregadoUsuario);
 
+    // const logueo = JSON.parse(fs.readFileSync(loginCangrejo, 'utf-8'));
+    // let nuevoUsuario = req.body;
+    // let nuevoArchivo2 = req.file;
+    // let idUsuario = parseInt(req.params.IdUser)
+    // let code = logueo.find((u) => u.Id === idUsuario)
 
+    // if (code && nuevoUsuario) {
+    //     //code.Id= nuevoUsuario.Id
+    //     code.nombre = nuevoUsuario.nombre
+    //     code.apellido = nuevoUsuario.apellido
+    //     code.telefono = nuevoUsuario.telefono
+    //     code.email = nuevoUsuario.email
 
+    // }
+    // if (nuevoArchivo2) {
+    //     code.imagen = req.file.filename
+    // console.log(nuevoUsuario);
+    // console.log(nuevoArchivo2);
+    // console.log(idUsuario);
 
-
-
-
+    // const agregadoUsuario = JSON.stringify(logueo, null, " ");
+    // fs.writeFileSync(loginCangrejo, agregadoUsuario);
 
     borrarUsuario: async (req, res) => {
         try {
             const borrar = await db.users.destroy({
-                where:{
+                where: {
                     id_user: req.params.idUser
                 }
             })
-            res.redirect("/")
-            
+            res.redirect("/users/logout/")
+
         } catch (error) {
             res.send("hubo un error" + error)
-            
+
         };
-        
-                // let logueo = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-                // let idUsuario = parseInt(req.params.idUser)
-                // let nanoto = logueo.filter((u) => u.id !== idUsuario)
-                // nanoto = JSON.stringify(nanoto, null, " ");
-                // fs.writeFileSync(loginCangrejo, nanoto);
-                // res.redirect("/")
-        
-            }
-        
-        }
-        
-        
-        module.exports = usuariosControllers;
+
+        // let logueo = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
+        // let idUsuario = parseInt(req.params.idUser)
+        // let nanoto = logueo.filter((u) => u.id !== idUsuario)
+        // nanoto = JSON.stringify(nanoto, null, " ");
+        // fs.writeFileSync(loginCangrejo, nanoto);
+        // res.redirect("/")
+
+    },
+    logout : (req,res) => {
+
+        req.session.destroy();
+        return res.redirect('/')
+
+    }
+    
+
+}
+
+
+module.exports = usuariosControllers;
 
 
 

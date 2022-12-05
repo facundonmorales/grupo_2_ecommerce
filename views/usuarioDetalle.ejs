@@ -32,15 +32,19 @@
                                 </div>
 
                                 <br>
-                                <button type="submit" class="boton-producto"> Menu principal</button>
+                                <button type="submit" class="boton-producto">
+                                    <a href="/" class="boton-producto">Menu principal</a> </button>
                                 <br>
-                                <button type="submit" class="boton-producto"> Borrar</button>
+                                <button type="submit" class="boton-producto">
+                                    <a href="/users/logout/" class="boton-producto">Cerrar Sesion</a>
+                                </button>
                                 <br>
 
                                 </form>
                                 <button type="submit" class="boton-producto">
-                                    <a href="/users/editar/<%= p.Id %>" class="boton-producto">Editar</a>
+                                    <a href="/users/editar/<%=p.id_user%>" class="boton-producto">Editar</a>
                                 </button>
+                            
                             </div>
                         </div>
 

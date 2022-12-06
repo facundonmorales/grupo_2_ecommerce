@@ -2,112 +2,88 @@
 <html lang="en">
 <%- include("./partials/head") %>
 
-<!-- <head>
-     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <title>Carrito</title>
 
-</head> -->
 <body>
 
 <%- include("./partials/headerHome")  %> 
-    <!-- <header>
-        <div class="container">
-            <nav>
-                <a class="menu" href="">
-                    <div class="bars_menu">
-                        <span class="linea1_bars-menu"></span>
-                        <span class="linea2_bars-menu"></span>
-                        <span class="linea3_bars-menu"></span>
-                    </div>
-                </a>
-                <a class="logo" href="/">
-                    <img src="/img/logo.png" alt="logo">
-                </a>
-                <div class="boton_carrito">
-                    <a href=""><i class="fas fa-shopping-bag"></i></a>
-                </div>
-            </nav>
-        </div>
-    </header> -->
+    
 
 
     <h1>Carrito de Compra</h1>
     <h3>Articulos recientemente agrega al carrito:</h3>
     <main class="carrito">
         <div class="productoC">
-            <img  width="20%" src="imagenes/airpods.jpg" alt="">
-            <h3>AirPods</h3>
-            <select name="cantidad" class="cajon-cantidad">
-                <option name="cantidad" value=1>Cantidad:1</option>
-                <option name="cantidad" value=2>Cantidad:2</option>
-                <option name="cantidad" value=3>Cantidad:3</option>
-                <option name="cantidad" value=4>Cantidad:4</option>
-                <option name="cantidad" value=5>Cantidad:5</option>
-                <option name="cantidad" value=6>Cantidad:6</option>
-                <option name="cantidad" value=7>Cantidad:7</option>
-                <option name="cantidad" value=8>Cantidad:8</option>
-                <option name="cantidad" value=9>Cantidad:9</option>
-                <option name="cantidad" value=10>Cantidad:10</option>
-            </select>
-           <span class="precio">Precio:300$</span>
-           <a href="/">Eliminar</a> 
+            <table class="table table-responsive-md mb-0">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">
+                            <strong>#</strong>
+                        </th>
+                        <th class="th-lg">
+                            <strong>Producto</strong>
+                        </th>
+                        <th class="th-lg ">
+                            <strong>Precio</strong>
+                        </th>
+                        <th class="text-center">
+                            <strong>Cantidad</strong>
+                        </th>
+                        <th class="text-center">
+                            <strong>Subtotal</strong>
+                        </th>
+                        <th style="width: 50px;"></th>
+                    </tr>
+                </thead>
+                <tbody class="carritotabla">
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-right">
+            
         </div>
 
-        <div class="productoC">
-            <img  width="20%" src="imagenes/airpods.jpg" alt="">
-            <h3>AirPods</h3>
-            <select name="cantidad" class="cajon-cantidad">
-                <option name="cantidad" value=1>Cantidad:1</option>
-                <option name="cantidad" value=2>Cantidad:2</option>
-                <option name="cantidad" value=3>Cantidad:3</option>
-                <option name="cantidad" value=4>Cantidad:4</option>
-                <option name="cantidad" value=5>Cantidad:5</option>
-                <option name="cantidad" value=6>Cantidad:6</option>
-                <option name="cantidad" value=7>Cantidad:7</option>
-                <option name="cantidad" value=8>Cantidad:8</option>
-                <option name="cantidad" value=9>Cantidad:9</option>
-                <option name="cantidad" value=10>Cantidad:10</option>
-            </select>
-           <span class="precio">Precio:300$</span>
-           <a href="/">Eliminar</a> 
-        </div>
+    </div>
+    <form class="carritopago" id="carritopago">
+        <div class="carritoform">
+            <div class="carritoform2">
+                <label for="envio">Tipo Envio</label>
+                <select class="metodode}envio" id="metododeenvio" name=" metododeenvio"
+                    required="">
+                    <option value="">Elegir...</option>
+                    <option value="Cadete">Cadete</option>
+                    <option value="Correo">Correo Argentino</option>
+                    <option value="Andreani">Andreani</option>
+                    <option value="DHL">DHL</option>
+                </select>
+                <div class="invalidarespuesta">
+                    Elija un tipo de envio.
+                </div>
 
-        <div class="productoC">
-            <img  width="20%" src="imagenes/airpods.jpg" alt="">
-            <h3>AirPods</h3>
-            <select name="cantidad" class="cajon-cantidad">
-                <option name="cantidad" value=1>Cantidad:1</option>
-                <option name="cantidad" value=2>Cantidad:2</option>
-                <option name="cantidad" value=3>Cantidad:3</option>
-                <option name="cantidad" value=4>Cantidad:4</option>
-                <option name="cantidad" value=5>Cantidad:5</option>
-                <option name="cantidad" value=6>Cantidad:6</option>
-                <option name="cantidad" value=7>Cantidad:7</option>
-                <option name="cantidad" value=8>Cantidad:8</option>
-                <option name="cantidad" value=9>Cantidad:9</option>
-                <option name="cantidad" value=10>Cantidad:10</option>
-            </select>
-           <span class="precio">Precio:300$</span>
-           <a href="/">Eliminar</a> 
-        </div>
+            </div>
+            <div class=" carritoform2">
+                <label for="pago">Pago</label>
+                <select class="metododepago" id="metododepago" name="metododepago"
+                    required="">
+                    <option value="">Elegir...</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Débito">Tarjeta Débito</option>
+                    <option value="Crédito">Tarjeta Crédito</option>
+                </select>
+                <div class="invalidarespuesta">
+                    Elija un tipo de envio.
+                </div>
+       
+
+       
+
+      
     
         <div class="finalCompra">
-            <span class="envioTitle">Envio a dirección</span>
-             
-            <span class="addressFinal">Nicolas vila 470, Buenos Aires, Argentina</span>
+           
             <br>
-            <span>Costo</span>
-            <span>5$</span>
-            <br>
-            <h4>Total con envió</h4>
-            <br>
-             <h4 class="precioFinal">305$</h4>
-             <button type="submit" class="boton-producto">Seguir Comprando</button>
-            <button type="submit" class="boton-producto"> Finalizar compra</button>
+            <h4>Total: <span class="totalmonto">$ 0</span></h4>
+            <button type="submit" class="boton-producto">COMPRAR</button>
+            <button type="submit" class="boton-producto"> seguir comprando</button>
            
 
         </div>
@@ -115,15 +91,8 @@
     
     </main>
     <%- include("./partials/footer") %> 
-    <!-- <footer>
-        <div class="container_footer">
-            <a href="#"><i class="fas fa-address-card"></i>Sobre Nosotros</a>
-            <a href="#"><i class="fas fa-headset"></i>Ayuda</a>
-            <a href="#"><i class="fas fa-truck"></i>Envios</a>
-            <a href="#"><i class="fas fa-credit-card"></i>Medios de pago</a>
-        </div>
-    </footer> -->
-
+   
 </body>
+<script src="/scripts/formcart.js"></script>
 
 </html>

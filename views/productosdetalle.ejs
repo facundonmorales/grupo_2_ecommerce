@@ -45,7 +45,7 @@
                         <br>
                         <button type="submit" class="boton-producto"> Comprar</button>
                         <br>
-                        <button type="submit" class="boton-producto"> Agregar al carrito</button>
+                        <button type="submit" class="boton-producto carrito" data-id="<%= producto.id_product %>"> Agregar al carrito</button>
                         <br>
                         
                         <!-- <a href="/products/edit/<%= producto.id %>" class="boton-producto">EDITAR PRODUCTO</a> -->
@@ -78,5 +78,6 @@
         </section>
         <%- include("./partials/footer") %> 
     </div>
+   <script src="/scripts/formdetalleProducto.js"></script>
 </body>
 </html>

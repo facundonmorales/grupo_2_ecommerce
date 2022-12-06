@@ -40,9 +40,22 @@ const UserControllers = {
 
         try {
 
-            const usuario = await db.users.findByPk(req.params.id
+            let usuario = await db.users.findByPk(req.params.id
 
             );
+            usuario = usuario.map((usuario) => {
+                return {
+                    id: usuario.id_user,
+                    nombre: usuario.nombre,
+                    apellido: usuario.apellido,
+                    email: usuario.email,
+                    url: "http://localhost:3005/api/usuarios/users/" + usuario.id_user,
+
+
+                }
+            })
+
+           
 
             let respuesta = {
                 meta: {

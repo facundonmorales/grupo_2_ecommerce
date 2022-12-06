@@ -248,10 +248,10 @@ const productosController = {
     // },
     borrarProducto: async(req,res)=>{
         try {
-            const productoABorrar = await db.products.destroy({
+            let productoABorrar = await db.products.destroy({
                 where:{
                     id_product: req.params.idUser
-                }
+                },
             });
                 res.redirect('/')
 

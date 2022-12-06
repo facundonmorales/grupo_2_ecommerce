@@ -1,11 +1,16 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require("body-parser");
 const app = express();
 const cookieParser= require("cookie-parser")
 const userLogged = require('./middlewares/userLogged')
 
-
-
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+  });
+app.use(cors());
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 

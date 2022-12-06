@@ -157,6 +157,8 @@ const usuariosControllers = {
 
 
     modificarUsuario: async (req, res) => {
+        console.log('////////////////////////////////////');
+        console.log(req.params.idUser);
         let logueo = db.users;
 
         let file = req.file;
@@ -183,9 +185,9 @@ const usuariosControllers = {
                 }
             });
 
-            console.log(
-                { logueo }
-            )
+            // console.log(
+            //     { logueo }
+            // )
             console.log(
                 req.body
             )

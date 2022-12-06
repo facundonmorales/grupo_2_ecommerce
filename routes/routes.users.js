@@ -114,7 +114,7 @@ const validacionesLogin = [
     router.get('/register', guestMiddleware, usuariosControllers.register), 
     router.post("/register", upload.single("imagen"), validacionesUsuarioC, usuariosControllers.registroDeUsuarios),
     router.get("/editar/:idUser", authMiddleware, usuariosControllers.editarUsuario),
-    router.put("/editar/:idUser", usuariosControllers.modificarUsuario),
+    router.put("/editar/:idUser",upload.single("imagen"), usuariosControllers.modificarUsuario),
     router.delete("/borrar/:idUser", usuariosControllers.borrarUsuario),
     
     

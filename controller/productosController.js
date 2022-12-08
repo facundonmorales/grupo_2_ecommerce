@@ -6,25 +6,9 @@ const db = require('../database/models')
 const { validationResult } = require('express-validator');
 
 
-// const direccionProductos = path.join(__dirname, '../listadoProductos.json')
-
-
-
-// const productsFilePath = path.join(__dirname, '../listadoProductos.json');
-//const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
 
 const productosController = {
-    // mostrarTodos: (req, res) => {
-    //     res.send('Todos los productos')
 
-
-    // index: (req, res) => {
-    //     const productsFilePath = path.join(__dirname, '../listadoProductos.json');
-    //     const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        
-    //     res.render('index',{ productos: productos });
-        
-    // },
     detalle: async (req, res) => {
         try {
             // const producto = await db.products.findByPk(req.params.id,{include:["Category"]});
@@ -37,18 +21,6 @@ const productosController = {
         // res.render('productosdetalle');
     },
 
-
-
-    // detalle: (req, res) => {
-    //     const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-    //     const producto = productos.filter((p) => p.id == req.params.id);
-
-    //     console.log(producto,'///////////////////////////////////////////////');
-
-
-    //     res.render('productosdetalle',{ producto: producto });
-    // },
-  
 
     crearProducto: (req, res) => {
         res.render('productCreate')
@@ -94,36 +66,6 @@ const productosController = {
         }
 
     },
-
-    // CONTROLARDOR VIEJO CON JSON
-    // store: (req, res) => {
-
-
-    //     const productoNuevo = {
-    //         id: Date.now(),
-    //         nombre: req.body.nombre,
-    //         caracteristicas: req.body.caracteristicas,
-    //         precio: req.body.precio,
-    //         imagen: "default-image.png"
-
-    //     };
-
-    //     if (req.file) {
-
-    //         productoNuevo.imagen = req.file.filename;
-
-    //     }
-    //     const productos = JSON.parse(fs.readFileSync(direccionProductos, 'utf-8'));
-
-    //     productos.push(productoNuevo);
-
-    //     const data = JSON.stringify(productos, null, " ");
-    //     fs.writeFileSync(direccionProductos, data);
-
-
-
-    //     res.redirect('/productos/crear')
-    // },
 
     crearProducto: (req, res) => {
         res.render('productCreate')

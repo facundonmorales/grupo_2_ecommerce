@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("./partials/headHome.ejs") %> 
-<body class="bodyhome">
-    <header>
-		<%- include("./partials/headerHome.ejs") %>
-    </header>
-    <main class="mainhome">
-		<p class="titulo"><b>Krabby Store</b>. Tenemos los productos que amas.</p>
-		<div class="novedades">
-			<p class="slogans"><b>Lo Último</b>. Echa un vistazo a las novedades.</p>
-			<section>
-				<%- include('./partials/sliderProductos.ejs') %>
-			</section>
-		</div>
-		<div class="ofertas">
-			<p class="slogans"><b>Te recomendamos</b>. Según lo ultimo que viste.</p>
-			<section>
-				<%- include('./partials/sliderProductos.ejs') %>
-			</section>
-		</div>
-		<div class="ofertas">
-			<p class="slogans"><b>Ofertas</b>. Los mejores productos, al mejor precio.</p>
-			<section>
-				<%- include('./partials/sliderProductos.ejs') %>
-			</section>
-		</div>
-	</main>
-	<%- include('./partials/footer.ejs') %>
-</body>
+
+   <!-- HEAD-->
+  <head>
+    <%- include("./partials/head.ejs") %>
+  </head>
+   <!-- FIN HEAD-->
+
+  <body>
+   <!-- HEADER-->
+    <%- include("./partials/header.ejs") %>
+   <!-- FIN HEADER-->
+    <main>
+      <!-- FIN SLIDER BANNER -->
+      <%- include("./partials/slider-banner.ejs") %>
+      <!-- FIN SLIDER BANNER -->
+
+      <!-- SLIDER CATEGORIAS-->
+      <%- include("./partials/slider-category.ejs") %>
+      <!-- FIN SLIDER CATEGORIAS-->
+
+      <!-- SLIDER NOVEDADES-->
+
+      
+      <section class="latest">
+         <h1 class="heading">LO ÚLTIMO</h1>
+         <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+              <% for (let p of producto) {%>
+              <div class="swiper-slide">
+                <a href="/productos/detalleProducto/<%= p.id_product %>">
+                  <img src="../imagenes/<%= p.imagen %>" alt="">
+                </a>
+                <div class="name"><%= p.nombre %></div>
+               <div class="flex">
+                  <div class="price">$<%= p.precio %></div>
+                  <div>
+                    <a href="#" class="añadirCarrito"><i class="fas fa-shopping-bag"></i></a>
+                    <input type="number" name="cant" class="cant" min="1" max="99" value="1">
+                  </div>
+               </div>
+              </div>
+              <%}%>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+      </section>
+      <!-- FIN SLIDER NOVEDADES-->
+
+      <!-- SLIDER OFERTAS-->
+      <section class="latest">
+         <h1 class="heading">OFERTAS</h1>
+         <div class="swiper product-slider">
+          <div class="swiper-wrapper">
+            <% for (let p of producto) {%>
+              <%if(p.precio < 100){%>
+                <div class="swiper-slide">
+                  <a href="/productos/detalleProducto/<%= p.id_product %>">
+                    <img src="../imagenes/<%= p.imagen %>" alt="">
+                  </a>
+                  <div class="name"><%= p.nombre %></div>
+                 <div class="flex">
+                    <div class="price">$<%= p.precio %></div>
+                    <div>
+                      <a href="#" class="añadirCarrito"><i class="fas fa-shopping-bag"></i></a>
+                      <input type="number" name="cant" class="cant" min="1" max="99" value="1">
+                    </div>
+                 </div>
+                </div>
+                <%}%>
+            <%}%>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+            
+      </section>
+      <!-- FIN SLIDER OFERTAS-->
+    </main>
+
+    <footer class="footer">
+      <%- include("./partials/footer.ejs") %>
+    </footer>
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- FIN Swiper.js -->
+    <script src="js/index.js"></script>
+  </body>
 </html>

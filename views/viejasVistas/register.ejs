@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head") %>
+
+    <body>
+
+        <%- include("./partials/headerHome") %>
+            <main class="espacio">
+                <div class="Registro">
+                    <h1>Registrate</h1>
+                    <br>
+                    <div id="errores"></div>
+                    <form action="/users/register" method="post" enctype="multipart/form-data">
+                        <br>
+                        <label for="nombre">ingrese su nombre</label>
+                        <input name="nombre" type="text" placeholder="Nombre" id="nombre"
+                            value="<%=locals.oldData? oldData.nombre: null %>">
+                        <% if(locals.errors && errors.nombre){ %>
+                            <div class="text-danger">
+                                <%= errors.nombre.msg %>
+                            </div>
+                            <% } %>
+                                <br>
+                                <label for="apellido">ingrese su apellido</label>
+                                <input name="apellido" type="text" placeholder="Apellido" id="apellido"
+                                    value="<%=locals.oldData? oldData.apellido: null %>">
+                                <% if(locals.errors && errors.apellido){ %>
+                                    <div class="text-danger">
+                                        <%= errors.apellido.msg %>
+                                    </div>
+                                    <% } %>
+                                        <br>
+                                        <label for="telefono">ingrese su telefono</label>
+                                        <input name="telefono" type="tel" placeholder="Telefono" id="telefono"
+                                            value="<%=locals.oldData? oldData.telefono: null %>">
+                                        <% if(locals.errors && errors.telefono){ %>
+                                            <div class="text-danger">
+                                                <%= errors.telefono.msg %>
+                                            </div>
+                                            <% } %>
+                                                <br>
+                                                <label for="email">ingrese su Email</label>
+                                                <input name="email" type="text" placeholder="Email" id="email"
+                                                    value="<%=locals.oldData? oldData.email: null %>">
+                                                <% if(locals.errors && errors.email){ %>
+                                                    <div class="text-danger">
+                                                        <%= errors.email.msg %>
+                                                    </div>
+                                                    <% } %>
+                                                        <br>
+                                                        <label for="nombre">ingrese una imagen </label>
+                                                        <input type="file" class="boton  " name="imagen" id="imagen">
+                                                        <% if(locals.errors && errors.imagen){ %>
+                                                            <div class="text-danger">
+                                                                <%= errors.imagen.msg %>
+                                                            </div>
+                                                            <% } %>
+                                                                <br>
+                                                                <label for="password">ingrese su Contraseña</label>
+                                                                <input name="password" type="password" id="password"
+                                                                    placeholder="Contraseña">
+                                                                <% if(locals.errors && errors.password){ %>
+                                                                    <div class="text-danger">
+                                                                        <%= errors.password.msg %>
+                                                                    </div>
+                                                                    <% } %>
+                                                                        <br>
+                                                                        <a href="./login"><span>¿Ya eres miembro?
+                                                                            </span>Inicia
+                                                                            tu sesión</a>
+                                                                        <br>
+                                                                        <button type="submit" class="boton">
+                                                                            Registrarse</button>
+
+                    </form>
+                </div>
+
+            </main>
+            <script src="/scripts/formRegistro.js"></script>
+            <%- include("./partials/footer") %>
+    </body>
+
+</html>

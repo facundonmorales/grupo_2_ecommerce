@@ -15,52 +15,21 @@ const homeController = {
         res.send(error)    
             
  }
-    //CONTROLADOR VIEJO CON JSON
- // index: (req, res) => {
-    //     const productsFilePath = path.join(__dirname, '../listadoProductos.json');
-    //     const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-    //     res.render('index', { productos: productos });
-
-        // },
-        // crearProducto: (req, res) => {
-        //     res.render('productCreate')
-        // },
-
-        // store: (req, res) => {
-
-
-        //     const productoNuevo = {
-        //         id: Date.now(),
-        //         nombre: req.body.nombre,
-        //         caracteristicas: req.body.caracteristicas,
-        //         precio: req.body.precio,
-        //         imagen: "default-image.png"
-
-        //     };
-
-        //     if (req.file){
-
-        // 		productoNuevo.imagen=req.file.filename;
-
-        // 	}
-        //     const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-        //     productos.push(productoNuevo);
-
-        //     const data = JSON.stringify(productos, null, " ");
-        //     fs.writeFileSync(productsFilePath, data);
-
-        //     // Do the magic
-
-        //     console.log('////////////');
-        //     console.log(productos);
-        //     console.log('////////////');
-
-        //     res.redirect('/crear')
-        // },
-
+    },
+    searchPage: function(req, res){
+        res.render('busqueda');
+    },
+    loginPage: function(req, res){
+        res.render('login')
+    },
+    registerPage: function(req, res){
+        res.render('register')
+    },
+    productPage: function(req, res){
+        res.render('products')
     }
+
 }
 
 module.exports = homeController;

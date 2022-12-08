@@ -21,6 +21,10 @@ const upload = multer({storage})
 const router = express.Router();
 
 router.get('/', homeController.index);
+router.get('/buscar', homeController.searchPage)
+router.get('/login', homeController.loginPage)
+router.get('/register', homeController.registerPage)
+router.get('/productos', homeController.productPage);
 
 // router.get('/login', usersController.login);
 // router.get('/register', homeController.register);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/headHome.ejs") %> 
+<body class="bodyhome">
+    <header>
+		<%- include("./partials/headerHome.ejs") %>
+    </header>
+    <main class="mainhome">
+		<p class="titulo"><b>Krabby Store</b>. Tenemos los productos que amas.</p>
+		<div class="novedades">
+			<p class="slogans"><b>Lo Último</b>. Echa un vistazo a las novedades.</p>
+			<section>
+				<%- include('./partials/sliderProductos.ejs') %>
+			</section>
+		</div>
+		<div class="ofertas">
+			<p class="slogans"><b>Te recomendamos</b>. Según lo ultimo que viste.</p>
+			<section>
+				<%- include('./partials/sliderProductos.ejs') %>
+			</section>
+		</div>
+		<div class="ofertas">
+			<p class="slogans"><b>Ofertas</b>. Los mejores productos, al mejor precio.</p>
+			<section>
+				<%- include('./partials/sliderProductos.ejs') %>
+			</section>
+		</div>
+	</main>
+	<%- include('./partials/footer.ejs') %>
+</body>
+</html>

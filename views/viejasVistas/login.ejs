@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head") %>
+
+    <body>
+
+        <%- include("./partials/headerHome") %>
+            <main>
+                <div class="login">
+                    <h1>Iniciar sesión</h1>
+                    <div id="errores"></div>
+                    <form action="/users/login" method="post">
+
+                        <input name="email" type="text" placeholder="email" id="email">
+                        <% if(locals.errors && errors.email){ %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                                <br>
+                                <input name="password" type="password" placeholder="Contraseña" id="password">
+                                <% if(locals.errors && errors.password){ %>
+                                    <div class="text-danger">
+                                        <%= errors.password.msg %>
+                                    </div>
+                                    <% } %>
+                                        <br>
+                                        <a href="./pass">¿Olvidaste tu contraseña?</a>
+                                        <br>
+                                        <label for="">recordarme</label>
+                                        <input type="checkbox" name="recordarme" value="true">
+
+                                        <button type="submit" class="boton" value="Login"> Log in</button>
+                                        <br>
+                                        <a href="./register">Crear cuenta</a>
+                    </form>
+                </div>
+
+            </main>
+            <script src="/scripts/formlogin.js"></script>
+            <%- include("./partials/footer") %>
+    </body>
+
+</html>

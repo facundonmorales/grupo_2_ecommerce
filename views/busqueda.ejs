@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include("./partials/head.ejs") %>
+</head>
+<body>
+   <%- include("./partials/header.ejs") %>
+   <section class="search-form">
+      <form action="" method="post">
+         <input type="text" name="search_box" placeholder="Buscar" maxlength="100" class="box" required>
+         <button type="submit" class="fas fa-search" name="search_btn"></button>
+      </form>
+   </section>
+
+   <footer class="footer">
+      <%- include("./partials/footer.ejs") %>
+   </footer>
+</body>
+</html>

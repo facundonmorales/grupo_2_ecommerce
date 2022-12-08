@@ -1,45 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+   <%- include("./partials/head.ejs") %>
+</head>
+<body>
+   <%- include("./partials/header.ejs") %>
 
-<%- include("./partials/head") %>
+   <main class="login-main">
+    <section class="form-container">
 
-    <body>
-
-        <%- include("./partials/headerHome") %>
-            <main>
-                <div class="login">
-                    <h1>Iniciar sesión</h1>
-                    <div id="errores"></div>
-                    <form action="/users/login" method="post">
-
-                        <input name="email" type="text" placeholder="email" id="email">
-                        <% if(locals.errors && errors.email){ %>
-                            <div class="text-danger">
-                                <%= errors.email.msg %>
-                            </div>
-                            <% } %>
-                                <br>
-                                <input name="password" type="password" placeholder="Contraseña" id="password">
-                                <% if(locals.errors && errors.password){ %>
-                                    <div class="text-danger">
-                                        <%= errors.password.msg %>
-                                    </div>
-                                    <% } %>
-                                        <br>
-                                        <a href="./pass">¿Olvidaste tu contraseña?</a>
-                                        <br>
-                                        <label for="">recordarme</label>
-                                        <input type="checkbox" name="recordarme" value="true">
-
-                                        <button type="submit" class="boton" value="Login"> Log in</button>
-                                        <br>
-                                        <a href="./register">Crear cuenta</a>
-                    </form>
-                </div>
-
-            </main>
-            <script src="/scripts/formlogin.js"></script>
-            <%- include("./partials/footer") %>
-    </body>
-
+        <form action="" method="post">
+           <h3>login</h3>
+           <input type="email" name="email" required placeholder="Introduce tu email" maxlength="50"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+           <input type="password" name="pass" required placeholder="Introduce tu contraseña" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+           <input type="submit" value="LOGIN" class="btn" name="submit">
+           <p>No tienes una cuenta?</p>
+           <a href="/register" class="option-btn">REGÍSTRARSE</a>
+        </form>
+   </main>
+   
+   <footer class="footer">
+      <%- include("./partials/footer.ejs") %>
+   </footer>
+</body>
 </html>
